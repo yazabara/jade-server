@@ -1,15 +1,12 @@
-.content-section {
-  max-width: 14400px;
-  max-width: 900rem;
-  margin: 0 auto; }
-
 html {
   position: relative;
-  min-height: 100%; }
+  min-height: 100%;
+}
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+}
 
 #footer {
   position: absolute;
@@ -17,4 +14,5 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #222222; }
+  background-color: rgb(34, 34, 34);
+}
