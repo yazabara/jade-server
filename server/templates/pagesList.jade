@@ -1,0 +1,7 @@
+extends ../../jade/layouts/layout
+
+block main
+	.main-section
+		ul
+			each item in data
+				li: a(href="#{item.url}")=item.name

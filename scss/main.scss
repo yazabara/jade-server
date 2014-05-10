@@ -1,0 +1,4 @@
+.content-section {
+	@include rem-fallback(max-width, 900);
+	margin: 0 auto;
+}

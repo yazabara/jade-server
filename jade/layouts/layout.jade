@@ -1,0 +1,17 @@
+head
+	block headSection
+		include ../bloks/headSection
+		include ../bloks/mixins
+body
+	.wrapper
+		.page-content
+			block header-block
+				include ../bloks/header
+
+			.main-holder
+				block before-main-block
+				block main
+					include ../bloks/contentSection
+
+			block footer-block
+				include ../bloks/footer
