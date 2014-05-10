@@ -15,17 +15,6 @@ module.exports = function(grunt) {
 				bg: true
 			}
 		},
-		//настраиваем reload
-		//сервер приложения крутится на localhost:3000
-		//переходим на localhost:6001 и получаем то же приложение только с LiveReload
-		reload: {
-			port: 6001,
-			proxy: {
-				host: 'localhost',
-				port: 3000
-			}
-		},
-
 		// Склеиваем
 		concat: {
 			main: {
@@ -65,22 +54,9 @@ module.exports = function(grunt) {
 				tasks: ['sass']
 			}
 
-		},
-		connect: {
-			test: {
-				options: {
-					port: 8009,
-					base: '.'
-				}
-			}
 		}
 	});
 
-//  Загрузка плагинов, установленных с помощью npm install
-//	grunt.loadNpmTasks('grunt-contrib-concat');
-//	grunt.loadNpmTasks('grunt-contrib-uglify');
-//	grunt.loadNpmTasks('grunt-contrib-watch');
-//	grunt.loadNpmTasks('grunt-contrib-connect');
 	// Загрузка плагинов, установленных с помощью npm install
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
