@@ -1,7 +1,14 @@
-.content-section {
-  max-width: 14400px;
-  max-width: 900rem;
-  margin: 0 auto; }
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  margin: 0 auto;
+  max-height: 500px; }
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
 
 html {
   position: relative;
@@ -16,5 +23,4 @@ body {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #222222; }
+  height: 60px; }

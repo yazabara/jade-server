@@ -45,15 +45,14 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
+            css: {
+                files: '**/*.scss',
+                tasks: ['sass']
+            },
 			js: {
 				files: ['<%= concat.main.src %>'],
 				tasks: 'concat'  // Можно несколько: ['lint', 'concat']
-			},
-			css: {
-				files: '**/*.scss',
-				tasks: ['sass']
 			}
-
 		}
 	});
 
@@ -64,5 +63,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['concat', 'uglify']);
 	//стартуем приложение
 	//reload и на клиенте и на сервере
-	grunt.registerTask('server', ['bgShell:supervisor', 'watch']);
+	grunt.registerTask('server', ['bgShell:supervisor', 'watch:js', 'watch:css']);
 };

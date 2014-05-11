@@ -1,0 +1,32 @@
+#tver-carousel.carousel.slide(data-ride="carousel")
+    include indicators
+    .carousel-inner
+        .item.active
+            img(src="images/responsive/1.jpg")
+            .container
+                .carousel-caption
+                    h2 Отзывчивый веб-дизайн
+                    p Это проще чем кажется. Достаточно только захотеть, представить и сделать.
+        .item
+            img(src="images/responsive/2.png")
+            .container
+                .carousel-caption
+                    h2 Используй медиа запросы
+                    p @media - для медиа запросов.
+        .item
+            img(src="images/responsive/4.png")
+            .container
+                .carousel-caption
+                    h2 Резиновая сетка
+                    p Делаем резиновые макеты, сетки, таблицы!
+        .item
+            img(src="images/responsive/3.png")
+            .container
+                .carousel-caption
+                    h2 Все в ваших руках
+                    p https://github.com/yazabara/jade-server - тестовый проект, специально для вас
+
+    a.left.carousel-control(href="#tver-carousel",data-slide="prev")
+        span.glyphicon.glyphicon-chevron-left
+    a.right.carousel-control(href="#tver-carousel",data-slide="next")
+        span.glyphicon.glyphicon-chevron-right
