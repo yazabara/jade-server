@@ -1,38 +1,41 @@
-//no css
-@function strip-unit($num) {
-  @return $num / ($num * 0 + 1);
-}
-
-@mixin rem-fallback($property, $values...) {
-  $max: length($values);
-  $pxValues: '';
-  $remValues: '';
-
-  @for $i from 1 through $max {
-    $value: strip-unit(nth($values, $i));
-    $pxValues: #{$pxValues + $value*16}px;
-
-    @if $i < $max {
-      $pxValues: #{$pxValues + " "};
-    }
-  }
-
-  @for $i from 1 through $max {
-    $value: strip-unit(nth($values, $i));
-    $remValues: #{$remValues + $value}rem;
-
-    @if $i < $max {
-      $remValues: #{$remValues + " "};
-    }
-  }
-
-  #{$property}: $pxValues;
-  #{$property}: $remValues;
-}
-
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin mediaMobile {
+	@media only screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin mediaTableDeviceWidth {
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin mediaTablet {
+	@media only screen and (min-width: 768px) and (max-width: 1023px) {
+		@content;
+	}
+}
+
+@mixin mediaDesktop {
+	@media only screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin mediaTabletDesktop {
+	@media only screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin mediaMobileTablet {
+	@media only screen and (max-width: 1023px) {
+		@content;
+	}
 }

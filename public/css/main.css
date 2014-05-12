@@ -1,8 +1,20 @@
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
   margin: 0 auto;
-  max-height: 700px; }
+  max-height: 500px; }
 
-.qwe {
-  widows: inherit;
-  width: inherit; }
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; }
+
+#home-carousel {
+  margin-top: 50px; }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    max-height: 350px; } }
+
+@media only screen and (max-width: 767px) {
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    height: 310px; } }

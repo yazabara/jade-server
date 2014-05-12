@@ -1,16 +1,30 @@
+@import "mixins";
+
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
 	margin: 0 auto;
 	max-height: 500px;
-	//  height: 500px;
 }
 
 .carousel-caption {
 	background: rgba(0, 0, 0, 0.60);
 	@include border-radius(10px);
-//	background-color: red;
 }
 
 #home-carousel {
 	margin-top: 50px;
+}
+
+@include mediaTablet(){
+	.carousel-inner > .item > img,
+	.carousel-inner > .item > a > img {
+		max-height: 350px;
+	}
+}
+
+@include mediaMobile(){
+	.carousel-inner > .item > img,
+	.carousel-inner > .item > a > img {
+		height: 310px;
+	}
 }

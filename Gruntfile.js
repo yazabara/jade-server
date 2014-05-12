@@ -1,5 +1,5 @@
 // Обязательная обёртка
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
 	// Задачи
 	grunt.initConfig({
@@ -40,20 +40,23 @@ module.exports = function(grunt) {
 		},
 		sass: {
 			dist: {
-				files: [{
-					expand: true,
-					cwd: 'scss',
-					src: ['*.scss'],
-					dest: 'public/css',
-					ext: '.css'
-				}]
+				files: [
+					{
+						expand: true,
+						cwd: 'scss',
+						src: ['*.scss'],
+						dest: 'public/css',
+						ext: '.css'
+					}
+				]
 			}
 		},
 		watch: {
-            css: {
-                files: '**/*.scss',
-                tasks: ['sass']
-            },
+			css: {
+				files: '**/*.scss',
+//				files: ['<%= sass.dist.files.src %>'],
+				tasks: 'sass:dist'
+			},
 			js: {
 				files: ['<%= concat.main.src %>'],
 				tasks: 'concat'
@@ -61,7 +64,7 @@ module.exports = function(grunt) {
 		},
 		//чтобы работало все параллельно
 		concurrent: {
-			watchServer: ["watch", "bgShell:sassWatch", "bgShell:supervisor"],
+			watchServer: ['watch', "bgShell:sassWatch", "bgShell:supervisor"],
 			options: {
 				logConcurrentOutput: true
 			}
@@ -73,7 +76,6 @@ module.exports = function(grunt) {
 
 	// Задача по умолчанию
 	grunt.registerTask('default', ['concat', 'uglify']);
-	//стартуем приложение
-	//reload и на клиенте и на сервере
+
 	grunt.registerTask('server', ['concurrent:watchServer']);
 };

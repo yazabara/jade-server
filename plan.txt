@@ -72,3 +72,5 @@ Responsive web-design - Отзывчивый веб-дизайн
 @media screen and (max-width: 650px) {
 @media screen and (min-width: 500px) and (max-width: 800px) {
 для различных разрешений
+
+[думаю что еще рассказать]
