@@ -5,14 +5,19 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 
 		bgShell: {
-			//Запускаем приложение с помощью supervisor'a
-			//Теперь при изменении серверного кода
-			//сервер перезапускается автоматически
+			//сервер
 			supervisor: {
 				cmd: 'supervisor server/server.js',
 				stdout: true,
 				stderr: true,
-				bg: true
+				bg: false
+			},
+			"sassWatch": {
+				"bg": false,
+				"cmd": "sass --watch scss:/public/css"
+			},
+			"sassCompile": {
+				"cmd": "sass --update scss:/public/css"
 			}
 		},
 		// Склеиваем
@@ -51,7 +56,14 @@ module.exports = function(grunt) {
             },
 			js: {
 				files: ['<%= concat.main.src %>'],
-				tasks: 'concat'  // Можно несколько: ['lint', 'concat']
+				tasks: 'concat'
+			}
+		},
+		//чтобы работало все параллельно
+		concurrent: {
+			watchServer: ["watch", "bgShell:sassWatch", "bgShell:supervisor"],
+			options: {
+				logConcurrentOutput: true
 			}
 		}
 	});
@@ -63,5 +75,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['concat', 'uglify']);
 	//стартуем приложение
 	//reload и на клиенте и на сервере
-	grunt.registerTask('server', ['bgShell:supervisor', 'watch:js', 'watch:css']);
+	grunt.registerTask('server', ['concurrent:watchServer']);
 };

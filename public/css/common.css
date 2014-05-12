@@ -10,6 +10,9 @@
   -ms-border-radius: 10px;
   border-radius: 10px; }
 
+#home-carousel {
+  margin-top: 50px; }
+
 html {
   position: relative;
   min-height: 100%; }

@@ -1,15 +1,16 @@
-.carousel-inner>.item>img,
-.carousel-inner>.item>a>img {
-  margin: 0 auto;
-  max-height: 500px;
-  //height: 500px;
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+	margin: 0 auto;
+	max-height: 500px;
+	//  height: 500px;
 }
 
-.carousel-caption{
-  background: rgba(0, 0, 0, 0.60);
-  @include border-radius(10px);
+.carousel-caption {
+	background: rgba(0, 0, 0, 0.60);
+	@include border-radius(10px);
+//	background-color: red;
 }
 
-#tver-carousel {
-  margin-top: 50px;
+#home-carousel {
+	margin-top: 50px;
 }
