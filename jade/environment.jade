@@ -1,0 +1,12 @@
+extends layouts/layout
+
+block header-block
+	include pageBlocks/environment/header
+
+block content
+		include pageBlocks/environment/nodeJsBlock
+		include pageBlocks/environment/gruntBlock
+		include pageBlocks/environment/jadeBlock
+		include pageBlocks/environment/sassJade
+		hr.featurette-divider
+

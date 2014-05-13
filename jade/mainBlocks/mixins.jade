@@ -1,21 +1,31 @@
 mixin rowFeaturetteLeft(image, headerInfo, paragpaphs, id, dataTarget)
-	hr.featurette-divider(id="#{id}")
-	.row.featurette
-		.col-md-7
-			h2.featurette-heading #{headerInfo.header}
-				span.text-muted #{headerInfo.span}
-			p.lead
-				| #{paragpaphs}
-		.col-md-5
-			img.featurette-image.img-responsive(data-src="holder.js/500x500/auto",alt="500x500",src="#{image}")
+    hr.featurette-divider(id="#{id}")
+    .row.featurette
+        .col-md-7
+            h2.featurette-heading #{headerInfo.header}
+                span.text-muted #{headerInfo.span}
+            p.lead
+                | #{paragpaphs}
+        .col-md-5
+            img.featurette-image.img-responsive(data-src="holder.js/500x500/auto",alt="500x500",src="#{image}")
 
 mixin rowFeaturetteRight(image, headerInfo, paragpaphs, id)
-	hr.featurette-divider(id="#{id}")
-	.row.featurette
-		.col-md-5
-			img.featurette-image.img-responsive(data-src="holder.js/500x500/auto",alt="500x500",src="#{image}")
-		.col-md-7
-			h2.featurette-heading #{headerInfo.header}
-				span.text-muted #{headerInfo.span}
-			p.lead
-				| #{paragpaphs}
+    hr.featurette-divider(id="#{id}")
+    .row.featurette
+        .col-md-5
+            img.featurette-image.img-responsive(data-src="holder.js/500x500/auto",alt="500x500",src="#{image}")
+        .col-md-7
+            h2.featurette-heading #{headerInfo.header}
+                span.text-muted #{headerInfo.span}
+            p.lead
+                | #{paragpaphs}
+
+
+mixin dropdown(id, list)
+    li.dropdown
+        a(href="#",id="#{id}",class="dropdown-toggle",data-toggle="dropdown") Еще
+            b.caret
+        ul.dropdown-menu(role="menu",aria-labelledby="#{id}")
+            each item in list
+                li
+                    a(href="#{item.link}",tabindex="-1") #{item.info}
