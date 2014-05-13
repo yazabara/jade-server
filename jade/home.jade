@@ -1,8 +1,12 @@
 extends layouts/layout
 
 block header-block
-    include pageBlocks/header-home/header
-block top-section-block
-    include pageBlocks/carousel/carousel
+	include pageBlocks/home/header
+	include pageBlocks/carousel/carousel
+
 block content
-    | Что-нить о Твери
+		include pageBlocks/home/nodeJsBlock
+		include pageBlocks/home/gruntBlock
+		include pageBlocks/home/jadeBlock
+		hr.featurette-divider
+

@@ -9,5 +9,6 @@ http://nano.sapegin.ru/all/grunt-0-4
 http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
 http://css-tricks.com/sass-style-guide/
 http://pastie.org/6625624#49,176
+http://nodeguide.ru/doc/
 
 http://culttt.com/2013/11/18/setting-sass-grunt/
