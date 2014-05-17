@@ -21,9 +21,9 @@ mixin rowFeaturetteRight(image, headerInfo, paragpaphs, id)
                 | #{paragpaphs}
 
 
-mixin dropdown(id, list)
+mixin dropdown(id, list, label)
     li.dropdown
-        a(href="#",id="#{id}",class="dropdown-toggle",data-toggle="dropdown") Еще
+        a(href="#",id="#{id}",class="dropdown-toggle",data-toggle="dropdown") #{label}
             b.caret
         ul.dropdown-menu(role="menu",aria-labelledby="#{id}")
             each item in list
