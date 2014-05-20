@@ -21,7 +21,8 @@
     height: 310px; } }
 
 .jumbotron {
-  text-align: center; }
+  text-align: center;
+  background-color: #fff; }
 
 .questions {
   text-align: center; }
@@ -52,3 +53,20 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px; }
+
+.browser-support .supported {
+  background-color: #46a546;
+  background-image: -webkit-linear-gradient(top, #009933 0, #006600 100%);
+  background-image: linear-gradient(to bottom, #009933 0, #006600 100%);
+  background-repeat: repeat-x;
+  border: 1px solid #9ab0ba; }
+.browser-support .not-supported {
+  background-image: -webkit-linear-gradient(top, #d9534f 0, #c12e2a 100%);
+  background-image: linear-gradient(to bottom, #d9534f 0, #c12e2a 100%);
+  background-repeat: repeat-x;
+  border-color: #b11116; }
+.browser-support .partial-support {
+  background-image: -webkit-linear-gradient(top, #f0ad4e 0, #eb9316 100%);
+  background-image: linear-gradient(to bottom, #f0ad4e 0, #eb9316 100%);
+  background-repeat: repeat-x;
+  border-color: #e38d13; }

@@ -1,0 +1,27 @@
+@import "variables";
+@import "mixins";
+
+.browser-support{
+
+	.supported {
+		background-color: $green;
+		background-image: -webkit-linear-gradient(top,#009933 0,#006600 100%);
+		background-image: linear-gradient(to bottom,#009933 0,#006600 100%);
+		background-repeat: repeat-x;
+		border: 1px solid $blueGrey;
+	}
+
+	.not-supported {
+		background-image: -webkit-linear-gradient(top,#d9534f 0,#c12e2a 100%);
+		background-image: linear-gradient(to bottom,#d9534f 0,#c12e2a 100%);
+		background-repeat: repeat-x;
+		border-color: $redDarker;
+	}
+
+	.partial-support{
+		background-image: -webkit-linear-gradient(top,#f0ad4e 0,#eb9316 100%);
+		background-image: linear-gradient(to bottom,#f0ad4e 0,#eb9316 100%);
+		background-repeat: repeat-x;
+		border-color: #e38d13;
+	}
+}
