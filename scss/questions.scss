@@ -1,24 +1,27 @@
 @import "mixins";
 
 .questions {
-  text-align: center;
-  h2 {
-    font-size: 148px;
-  }
+	text-align: center;
+	h2 {
+		font-size: 118px;
+	}
+	img {
+		margin: auto;
+	}
 }
 
 @include mediaTablet() {
-  .questions {
-    h2 {
-      font-size: 100px;
-    }
-  }
+	.questions {
+		h2 {
+			font-size: 90px;
+		}
+	}
 }
 
 @include mediaMobile() {
-  .questions {
-    h2 {
-      font-size: 50px;
-    }
-  }
+	.questions {
+		h2 {
+			font-size: 50px;
+		}
+	}
 }

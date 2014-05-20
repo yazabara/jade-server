@@ -8,8 +8,9 @@
   -moz-border-radius: 10px;
   border-radius: 10px; }
 
-.page-content {
-  margin-top: 50px; }
+.carousel {
+  margin-top: 50px;
+  border-bottom: 1px solid; }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .carousel-inner > .item > img, .carousel-inner > .item > a > img {

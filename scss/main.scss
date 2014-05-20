@@ -11,8 +11,9 @@
 	@include border-radius(10px);
 }
 
-.page-content {
+.carousel {
 	margin-top: 50px;
+	border-bottom: 1px solid;
 }
 
 @include mediaTablet(){
