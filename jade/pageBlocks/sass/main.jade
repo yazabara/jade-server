@@ -1,0 +1,14 @@
+include contentHeader
+
+- var headerInfo = {header:'Sass', span: '  просто и удобно'};
+- var paragpaphs = "Sass имеет ряд преимуществ перед css. Начну с @import. Сам по себе @import не является преимуществом sass перед css, но его использование становится еще более оправданным потому, что возможно подключать по мимо sass-файла c ресетами и sass-файла c типографикой, sass-файл с «константами» , четвертый sass-файл с «абстрактными классами» . Потом это все пакуется в одну готовую css-ку. Что избавляет от работы с огромным кодом."
++rowFeaturetteLeft("images/sass.PNG",headerInfo,paragpaphs,"sass-id")
+
+.jumbotron
+	h2 Практика
+	h2.text-muted Так же предлагаю рассмотреть на примере этого простенького "сайта-презентации"
+	p
+		| Основные технологии выбрали - что дальше?
+	p
+		a.btn.btn-lg.btn-success(href="/twoWays" role="button") Далее
+include ../../mainBlocks/questions

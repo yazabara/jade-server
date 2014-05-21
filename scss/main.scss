@@ -39,3 +39,26 @@
   text-align: center;
 	background-color: $white;
 }
+
+.cat-background {
+	border: 1px solid $blueGrey;
+	background-repeat: no-repeat;
+	background-position: 100%;
+}
+
+.cat1 {
+	background-image: url(../images/cats/ex1.png);
+}
+
+.cat2 {
+	background-image: url(../images/cats/ex2.png);
+}
+
+.cat3 {
+	background-image: url(../images/cats/ex3.png);
+}
+
+.capabilities {
+	max-width: 600px;
+	margin: auto;
+}

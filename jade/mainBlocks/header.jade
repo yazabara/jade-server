@@ -8,7 +8,3 @@ nav.navbar.navbar-inverse.navbar-fixed-top(role="navigation")
                 span.icon-bar
                 span.icon-bar
             a.navbar-brand(href="#") Отзывчивый веб-дизайн
-        .navbar-collapse.collapse
-            ul.nav.navbar-nav
-                -var list = [{info:"sass",link:"sass"},{info:"jade",link:"jade"},{info:"Настройки окружения",link:"environment"}];
-                +dropdown("home-header",list,"С чего начнем?")

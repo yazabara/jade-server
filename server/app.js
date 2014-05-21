@@ -13,5 +13,5 @@ define(['require', 'express'], function (require, express) {
 
 	app.use(express.static( app.get('staticFolder') ));
 
-    return app;
+	return app;
 });

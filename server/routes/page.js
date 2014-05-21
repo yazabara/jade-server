@@ -9,6 +9,9 @@ define(['app'], function (app) {
 	function renderPagePreview(req, res) {
 		var name = req.params.page;
 		tplPath = path.resolve('./jade/'+name);
+		if (name == "favicon.ico") {
+			return;
+		}
 		res.render(tplPath);
 		console.log("rendering page: " + name);
 	}

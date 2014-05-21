@@ -27,6 +27,24 @@
   text-align: center;
   background-color: #fff; }
 
+.cat-background {
+  border: 1px solid #9ab0ba;
+  background-repeat: no-repeat;
+  background-position: 100%; }
+
+.cat1 {
+  background-image: url(../images/cats/ex1.png); }
+
+.cat2 {
+  background-image: url(../images/cats/ex2.png); }
+
+.cat3 {
+  background-image: url(../images/cats/ex3.png); }
+
+.capabilities {
+  max-width: 600px;
+  margin: auto; }
+
 .questions {
   text-align: center; }
   .questions h2 {
@@ -73,3 +91,11 @@ body {
   background-image: linear-gradient(to bottom, #f0ad4e 0, #eb9316 100%);
   background-repeat: repeat-x;
   border-color: #e38d13; }
+
+.nyan-cat {
+  position: absolute;
+  background-image: url(../images/cats/poptartFINALTINY.gif);
+  background-repeat: no-repeat;
+  width: 51px;
+  height: 20px;
+  z-index: 10000; }

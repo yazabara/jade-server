@@ -1,16 +1,17 @@
 head
-    block headSection
-        include ../mainBlocks/headSection
-        include ../mainBlocks/mixins
+	block headSection
+		include ../mainBlocks/headSection
+		include ../mainBlocks/mixins
 body
-    block main
-        block header-block
-            include ../mainBlocks/header
+	.nyan-cat
+	block main
+		block header-block
+			include ../mainBlocks/header
 
-        .container
-            .page-content
-                block before-main-block
-                block content
+		.container
+			.page-content
+				block before-main-block
+				block content
 
-    block footer-block
-        include ../mainBlocks/footer
+	block footer-block
+		include ../mainBlocks/footer
