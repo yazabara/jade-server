@@ -12,6 +12,9 @@
   margin-top: 50px;
   border-bottom: 1px solid; }
 
+.page-content {
+  margin-top: 50px; }
+
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     max-height: 350px; } }
@@ -21,4 +24,5 @@
     height: 310px; } }
 
 .jumbotron {
-  text-align: center; }
+  text-align: center;
+  background-color: #fff; }
