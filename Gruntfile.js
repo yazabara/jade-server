@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 			main: {
 				files: {
 					// Результат задачи concat
-					'build/scripts.min.js': '<%= concat.main.dest %>'
+					'release/js/scripts.js': '<%= concat.main.dest %>'
 				}
 			}
 		},
@@ -54,12 +54,62 @@ module.exports = function (grunt) {
 		watch: {
 			css: {
 				files: '**/*.scss',
-//				files: ['<%= sass.dist.files.src %>'],
 				tasks: 'sass:dist'
 			},
 			js: {
 				files: ['<%= concat.main.src %>'],
 				tasks: 'concat'
+			}
+		},
+		copy:{
+			"images": {
+				"files": [{
+					"expand": true,
+					"cwd": "public/images/",
+					"src": ["**"],
+					"dest": "release/images/"
+				}]
+			},
+			"libs": {
+				"files": [{
+					"expand": true,
+					"cwd": "public/lib/",
+					"src": ["**"],
+					"dest": "release/lib/"
+				}]
+			},
+			"css": {
+				"files": [{
+					"expand": true,
+					"cwd": "public/css/",
+					"src": ["common.css"],
+					"dest": "release/css/"
+				}]
+			}
+		},
+		jade: {
+			"options": {
+				"pretty" : true,
+				"amd": true,
+				"compileDebug": false
+			},
+			"compile": {
+				"files": [{
+					"expand": true,
+					"cwd": "./jade/",
+					"src": ["*.jade"],
+					"dest": "./release/",
+					"ext" : ".html"
+				}]
+			}
+		},
+		cssmin: {
+			minify: {
+				expand: true,
+				cwd: 'release/css/',
+				src: ['*.css'],
+				dest: 'release/css/',
+				ext: '.css'
 			}
 		},
 		//чтобы работало все параллельно
@@ -78,4 +128,6 @@ module.exports = function (grunt) {
 	grunt.registerTask('default', ['concat', 'uglify']);
 
 	grunt.registerTask('server', ['concurrent:watchServer']);
+
+	grunt.registerTask('release', ['jade','sass','uglify','copy','cssmin']);
 };
