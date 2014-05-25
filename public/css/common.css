@@ -50,6 +50,15 @@
   .featurette.container img {
     margin: auto; }
 
+.parallax-bg {
+  background: url(../images/parallax/homebg.jpg) center top no-repeat;
+  overflow: hidden;
+  border-bottom: 1px solid; }
+  .parallax-bg p {
+    color: #b11116; }
+  .parallax-bg h1 {
+    color: #7a43b6; }
+
 .questions {
   text-align: center; }
   .questions h2 {
@@ -98,7 +107,7 @@ body {
   border-color: #e38d13; }
 
 .nyan-cat {
-  position: absolute;
+  position: fixed;
   background-image: url(../images/cats/poptartFINALTINY.gif);
   background-repeat: no-repeat;
   width: 51px;

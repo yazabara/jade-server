@@ -49,3 +49,12 @@
   text-align: center; }
   .featurette.container img {
     margin: auto; }
+
+.parallax-bg {
+  background: url(../images/parallax/homebg.jpg) center top no-repeat;
+  overflow: hidden;
+  border-bottom: 1px solid; }
+  .parallax-bg p {
+    color: #b11116; }
+  .parallax-bg h1 {
+    color: #7a43b6; }

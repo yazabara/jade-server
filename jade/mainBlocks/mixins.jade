@@ -1,4 +1,4 @@
-mixin rowFeaturetteLeft(image, headerInfo, paragpaphs, id, dataTarget)
+mixin rowFeaturetteLeft(image, headerInfo, paragpaphs, id)
     hr.featurette-divider(id="#{id}")
     .row.featurette
         .col-md-7
@@ -19,6 +19,33 @@ mixin rowFeaturetteRight(image, headerInfo, paragpaphs, id)
                 span.text-muted #{headerInfo.span}
             p.lead
                 | #{paragpaphs}
+
+
+mixin rowFeaturetteLeftList(image, headerInfo, list, id)
+    hr.featurette-divider(id="#{id}")
+    .row.featurette
+        .col-md-7
+            h2.featurette-heading #{headerInfo.header}
+                span.text-muted #{headerInfo.span}
+            ul
+                each item,i in list
+                    li
+                        p.lead #{item}
+        .col-md-5
+            img.featurette-image.img-responsive(data-src="holder.js/500x500/auto",alt="500x500",src="#{image}")
+
+mixin rowFeaturetteRightList(image, headerInfo, list, id)
+    hr.featurette-divider(id="#{id}")
+    .row.featurette
+        .col-md-5
+            img.featurette-image.img-responsive(data-src="holder.js/500x500/auto",alt="500x500",src="#{image}")
+        .col-md-7
+            h2.featurette-heading #{headerInfo.header}
+                span.text-muted #{headerInfo.span}
+            ul
+                each item,i in list
+                    li
+                        p.lead #{item}
 
 
 mixin dropdown(id, list, label)
@@ -42,13 +69,27 @@ mixin Thumbnail3(id, list)
         each item,i in list
             .col-sm-6.col-md-4
                 .thumbnail
-                    a(data-toggle="lightbox",href="##{id}#{i}")
-                        img(data-src='holder.js/300x200', alt='300x200', src='#{item.img}', style='width: 300px; height: 200px;',)
+                    a(href="#{item.img}",data-lightbox="example-set" data-title="#{item.h3} #{item.p}",data-src='holder.js/300x200',style='width: 300px; height: 200px;' )
+                        img(src="#{item.img}" , alt="")
                     .caption
                         h3 #{item.h3}
                         p #{item.p}
-            //TODO fix
-            .lightbox.hide.fade(id="#{id}#{i}",tabindex="-1",role="dialog",aria-hidden="true")
-                .lightbox-content
-                    img(src="#{item.img}")
-                    .lightbox-caption #{item.h3}: #{item.p}
+
+//TODO fix responsive
+mixin parallax(id,header,p)
+    .jumbotron.parallax-bg.table-responsive
+        ul(id="#{id}")
+            li.layer(data-depth='0.80')
+                img(src='images/parallax/layer1.png')
+            li.layer(data-depth='0.20')
+                img(src='images/parallax/layer2.png')
+            li.layer(data-depth='0.40')
+                img(src='images/parallax/layer3.png')
+            li.layer(data-depth='0.60')
+                img(src='images/parallax/layer4.png')
+            li.layer(data-depth='0.150')
+                h1 #{header}
+            li.layer(data-depth='0.190')
+                img(src='images/parallax/light-orange.png')
+            li.layer(data-depth='0.140',style="")
+                p #{p}

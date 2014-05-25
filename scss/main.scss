@@ -3,69 +3,81 @@
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-	margin: 0 auto;
-	max-height: 500px;
+  margin: 0 auto;
+  max-height: 500px;
 }
 
 .carousel-caption {
-	background: rgba(0, 0, 0, 0.60);
-	@include border-radius(10px);
+  background: rgba(0, 0, 0, 0.60);
+  @include border-radius(10px);
 }
 
 .carousel {
-	margin-top: 50px;
-	border-bottom: 1px solid;
+  margin-top: 50px;
+  border-bottom: 1px solid;
 }
 
 .page-content {
   margin-top: 50px;
 }
 
-@include mediaTablet(){
-	.carousel-inner > .item > img,
-	.carousel-inner > .item > a > img {
-		max-height: 350px;
-	}
+@include mediaTablet() {
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    max-height: 350px;
+  }
 }
 
-@include mediaMobile(){
-	.carousel-inner > .item > img,
-	.carousel-inner > .item > a > img {
-		height: 310px;
-	}
+@include mediaMobile() {
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    height: 310px;
+  }
 }
 
 .jumbotron {
   text-align: center;
-	background-color: $white;
+  background-color: $white;
 }
 
 .cat-background {
-	border: 1px solid $blueGrey;
-	background-repeat: no-repeat;
-	background-position: 100%;
+  border: 1px solid $blueGrey;
+  background-repeat: no-repeat;
+  background-position: 100%;
 }
 
 .cat1 {
-	background-image: url(../images/cats/ex1.png);
+  background-image: url(../images/cats/ex1.png);
 }
 
 .cat2 {
-	background-image: url(../images/cats/ex2.png);
+  background-image: url(../images/cats/ex2.png);
 }
 
 .cat3 {
-	background-image: url(../images/cats/ex3.png);
+  background-image: url(../images/cats/ex3.png);
 }
 
 .capabilities {
-	max-width: 600px;
-	margin: auto;
+  max-width: 600px;
+  margin: auto;
 }
 
 .featurette.container {
   text-align: center;
   img {
     margin: auto;
+  }
+}
+
+.parallax-bg {
+  background: url(../images/parallax/homebg.jpg) center top no-repeat;
+  overflow: hidden;
+  border-bottom: 1px solid;
+  p {
+    color: $redDarker;
+  }
+  h1 {
+    color: $purple;
   }
 }
