@@ -1,0 +1,20 @@
+hr.featurette-divider(id="princ")
+.row.featurette
+    .col-md-5
+        img.featurette-image.img-responsive(data-src="holder.js/500x500/auto",alt="500x500",src="images/responsive_web_design_russian_version_book_cover.png")
+    .col-md-7
+        h2.featurette-heading Основа - резина
+            span.text-muted &nbspи не только
+        ul
+            li
+                p.lead Гибкий макет на основе сетки (flexible, grid-based layout)
+                p Основная идея — формула для вычисления пропорций в процентах «target / context = result». Например, у нас есть макет psd с шириной 1000px. В нем есть два блока: один слева шириной 270px, другой справа 730px. Сверстаем мы их так:
+                    | .leftcolumn { width: 27%; /* 270px / 1000px = 0,27 */ float: left; }
+                    | rightcolumn { width: 73%; /* 730px / 1000px = 0,73 */ float: right; }
+            li
+                p.lead Гибкие изображения (flexible images)
+                p Подстраивают свои размеры под блок родителя. Основная идея в неочевидном применении свойства { max-width: 100% }. Изображение с img { max-width: 100% } никогда не вылезет из своего блока-родителя.
+                    | Если блок-родитель меньше, чем размеры img, то изображение пропорционально уменьшится. Этот принцип применим как для img, так и для embed, object, video.
+            li
+                p.lead Медиазапросы (CSS3 media queries)
+                p Нужны для отображения макета, оптимизированного под разрешение, с которого в данный момент этот сайт смотрится. Это часть стандарта CSS, которая позволяет применять стили на основе информации о разрешении устройства.
