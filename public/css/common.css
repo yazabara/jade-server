@@ -45,6 +45,11 @@
   max-width: 600px;
   margin: auto; }
 
+.featurette.container {
+  text-align: center; }
+  .featurette.container img {
+    margin: auto; }
+
 .questions {
   text-align: center; }
   .questions h2 {

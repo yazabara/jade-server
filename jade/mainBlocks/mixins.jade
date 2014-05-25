@@ -29,3 +29,26 @@ mixin dropdown(id, list, label)
             each item in list
                 li
                     a(href="#{item.link}",tabindex="-1") #{item.info}
+
+
+mixin mainFeaturette(id, h2, p , img)
+    .featurette.container(id="#{id}")
+        h2 #{h2}
+        p.lead #{p}
+        img.featurette-image.img-responsive(src="#{img}" alt="info")
+
+mixin Thumbnail3(id, list)
+    .row(id="#{id}")
+        each item,i in list
+            .col-sm-6.col-md-4
+                .thumbnail
+                    a(data-toggle="lightbox",href="##{id}#{i}")
+                        img(data-src='holder.js/300x200', alt='300x200', src='#{item.img}', style='width: 300px; height: 200px;',)
+                    .caption
+                        h3 #{item.h3}
+                        p #{item.p}
+            //TODO fix
+            .lightbox.hide.fade(id="#{id}#{i}",tabindex="-1",role="dialog",aria-hidden="true")
+                .lightbox-content
+                    img(src="#{item.img}")
+                    .lightbox-caption #{item.h3}: #{item.p}

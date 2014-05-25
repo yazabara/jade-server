@@ -1,0 +1,20 @@
+.jumbotron
+    h1 Сервер за пару минут
+    h2.text-muted Всё проще чем кажется!
+
+include nodeJs
+include grunt
+
+.jumbotron
+    h2 Как это работает?
+
+- var list = [{h3:"Создаем проект", p:"Создаем проект, определяем файлы Gruntfile.js, package.json. Создаем начальные директории для ресурсов", img:"images/createProject.jpg"},{h3:"Gruntfile", p:"Первый - Gruntfile.js или Gruntfile.coffee — файл конфигурации Гранта (грантфайл). Определеяет модули и таски.", img:"images/gruntfile.jpg"},{h3:"package.json", p:"Второй - package.json — описание проекта для npm. Содержит список зависимостей (в нашем случае это Грант и его плагины) и позволяет потом устанавливать их все одной командой.", img:"images/package.jpg"}];
+
++Thumbnail3("info-id",list)
+
+.jumbotron.cat-background.cat1
+    h2 Разобрались?
+    p
+        a.btn.btn-lg.btn-success(href="environment" role="button") Тогда идем дальше
+
+include ../../mainBlocks/questions
