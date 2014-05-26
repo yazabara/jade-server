@@ -85,3 +85,15 @@
   font-size: 20px;
   text-decoration: none;
   border: solid 1px #999; }
+
+.extend-class-example, .extended-class-example, .extended-class-example2, .extended-class-example1 {
+  background-color: red; }
+
+.extended-class-example, .extended-class-example2 {
+  float: left; }
+
+.extended-class-example1 {
+  background-color: #000000; }
+
+.extended-class-example2 {
+  width: 100%; }

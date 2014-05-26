@@ -120,3 +120,22 @@
 		border: solid 1px #999;
 	}
 }
+
+.extend-class-example {
+  background-color: red;
+}
+
+.extended-class-example {
+  @extend .extend-class-example;
+  float: left;
+}
+
+.extended-class-example1 {
+  @extend .extend-class-example;
+  background-color: #000000;
+}
+
+.extended-class-example2 {
+  @extend .extended-class-example;
+  width: 100%;
+}

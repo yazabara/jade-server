@@ -1,93 +1,105 @@
-pre
+.row
+    .bs-callout.bs-callout-danger
+        h2 Примеры использования  media-запросов с sass
 
-	strong.mixin-code @mixin
-	strong.media-code &nbspmediaMobile {
-	br
-	strong.media-code    @media
-	strong.media-code &nbsponly screen and (max-width:
-	strong.value-code 767
-	strong.px-code px
-	strong.media-code ) {
-	br
-	strong.media-code        @content;
-	br
-	| }
+    pre
 
-pre
+        strong.mixin-code @mixin
+        strong.media-code &nbspmediaMobile {
+        br
+        strong.media-code    @media
+        strong.media-code &nbsponly screen and (max-width:
+        strong.value-code 767
+        strong.px-code px
+        strong.media-code ) {
+        br
+        strong.media-code        @content;
+        br
+        |    }
+        br
+        | }
 
-	strong.mixin-code @mixin
-	strong.media-code &nbspmediaDesktop {
-	br
-	strong.media-code    @media
-	strong.media-code &nbsponly screen and (min-width:
-	strong.value-code 1024
-	strong.px-code px
-	strong.media-code ) {
-	br
-	strong.media-code        @content;
-	br
-	| }
+    pre
 
-pre
+        strong.mixin-code @mixin
+        strong.media-code &nbspmediaDesktop {
+        br
+        strong.media-code    @media
+        strong.media-code &nbsponly screen and (min-width:
+        strong.value-code 1024
+        strong.px-code px
+        strong.media-code ) {
+        br
+        strong.media-code        @content;
+        br
+        |    }
+        br
+        | }
 
-	strong.mixin-code @mixin
-	strong.media-code &nbspmediaTabletDesktop {
-	br
-	strong.media-code    @media
-	strong.media-code &nbsponly screen and (min-width:
-	strong.value-code 767
-	strong.px-code px
-	strong.media-code ) {
-	br
-	strong.media-code        @content;
-	br
-	| }
+    pre
 
-pre
+        strong.mixin-code @mixin
+        strong.media-code &nbspmediaTabletDesktop {
+        br
+        strong.media-code    @media
+        strong.media-code &nbsponly screen and (min-width:
+        strong.value-code 767
+        strong.px-code px
+        strong.media-code ) {
+        br
+        strong.media-code        @content;
+        br
+        |    }
+        br
+        | }
 
-	strong.mixin-code @mixin
-	strong.media-code &nbspmediaTableDeviceWidth {
-	br
-	strong.media-code    @media
-	strong.media-code &nbsponly screen and (min-device-width:
-	strong.value-code 768
-	strong.px-code px
-	strong.media-code )
-	strong.media-code and (max-device-width:
-	strong.value-code 1024
-	strong.px-code px
-	strong.media-code )
-	strong.media-code {
-	br
-	strong.media-code        @content;
-	br
-	| }
+    pre
 
-pre
-	strong.mixin-code @mixin
-	strong.media-code &nbspborder-radius(
-	strong.value-code $radius
-	strong.media-code ) {
-	br
-	strong.def-code    -webkit-border-radius:
-	strong.value-code $radius;
-	br
-	strong.def-code    -moz-border-radius:
-	strong.value-code $radius;
-	br
-	strong.def-code    border-radius:
-	strong.value-code  $radius;
-	br
-	strong.media-code }
+        strong.mixin-code @mixin
+        strong.media-code &nbspmediaTableDeviceWidth {
+        br
+        strong.media-code    @media
+        strong.media-code &nbsponly screen and (min-device-width:
+        strong.value-code 768
+        strong.px-code px
+        strong.media-code )
+        strong.media-code and (max-device-width:
+        strong.value-code 1024
+        strong.px-code px
+        strong.media-code )
+        strong.media-code {
+        br
+        strong.media-code        @content;
+        br
+        |    }
+        br
+        | }
 
-pre
-	strong.mixin-code @function
-	strong.media-code  parseInt(
-	strong.value-code $n
-	strong.media-code ) {
-	strong.value-code /* 2 */
-	br
-	strong.media-code    @return
-	strong.value-code &nbsp$n / ($n * 0 + 1);
-	br
-	strong.media-code }
+    //pre
+    //    strong.mixin-code @mixin
+    //    strong.media-code &nbspborder-radius(
+    //    strong.value-code $radius
+    //    strong.media-code ) {
+    //    br
+    //    strong.def-code    -webkit-border-radius:
+    //    strong.value-code $radius;
+    //    br
+    //    strong.def-code    -moz-border-radius:
+    //    strong.value-code $radius;
+    //    br
+    //    strong.def-code    border-radius:
+    //    strong.value-code  $radius;
+    //    br
+    //    strong.media-code }
+    //
+    //pre
+    //    strong.mixin-code @function
+    //    strong.media-code  parseInt(
+    //    strong.value-code $n
+    //    strong.media-code ) {
+    //    strong.value-code /* 2 */
+    //    br
+    //    strong.media-code    @return
+    //    strong.value-code &nbsp$n / ($n * 0 + 1);
+    //    br
+    //    strong.media-code }

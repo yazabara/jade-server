@@ -1,0 +1,81 @@
+.row
+    .bs-callout.bs-callout-danger
+        h2 Логические операторы, применяемые в медиа-запросах
+
+    .bs-callout.bs-callout-info
+        p.lead and
+        p Логическое И. Указывается для объединения нескольких условий.
+        pre
+            strong.mixin-code @media
+            strong.media-code  all and
+            | (
+            strong.px-code color
+            | ) { ... }
+        | Пример. Стиль для всех цветных устройств
+
+    .bs-callout.bs-callout-info
+        p.lead not
+        p Логическое НЕ. Указывается для отрицания условия.
+        pre
+            strong.mixin-code @media
+            strong.media-code  all and
+            | (
+            strong.px-code not handheld
+            | ) { ... }
+        | Пример. Стиль для всех устройств кроме смартфонов
+
+    .bs-callout.bs-callout-warning
+        p.lead Оператор not имеет низкий приоритет и оценивается в запросе последним, поэтому выражение
+        pre
+            strong.mixin-code @media
+            strong.media-code  not all and
+            | (
+            strong.px-code color
+            | ) { ... }
+        p следует понимать как
+        pre
+            strong.mixin-code @media
+            strong.media-code  not
+            | (
+            strong.media-code all and
+            | (
+            strong.px-code color
+            | )) { ... }
+        p а не
+        pre
+            strong.mixin-code @media
+            | (
+            strong.media-code not all
+            | )
+            strong.media-code and
+            | (
+            strong.px-code color
+            | ) { ... }
+
+    .bs-callout.bs-callout-info
+        p.lead only
+        p Применяется для старых браузеров, которые не поддерживают медиа-запросы.
+        pre
+            strong.mixin-code @media
+            strong.media-code  only all and
+            | (
+            strong.px-code not handheld
+            | ) { ... }
+        | Пример. Стиль для новых браузеров
+
+    .bs-callout.bs-callout-warning
+        p.lead В списке нет логического оператора ИЛИ, его роль выполняет запятая. Перечисление нескольких условий через запятую говорит о том, что если хотя бы одно условие выполняется, то стиль будет применён.
+        pre
+            //@media all and (orientation: landscape), all and (min-width: 480px) { ... }
+            strong.mixin-code @media
+            strong.media-code all and
+            | (
+            strong.px-code orientation: landscape
+            | ),
+            strong.media-code all and
+            | (
+            strong.media-code min-width:
+            strong.px-code 480px
+            | )
+            | { ... }
+        | Пример. Стиль для устройств с альбомной ориентацией или минимальной шириной 480 пикселов.

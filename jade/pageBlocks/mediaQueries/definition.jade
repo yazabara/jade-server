@@ -1,0 +1,38 @@
+.row
+    .bs-callout.bs-callout-danger
+        h2 Media Queries: Медиа-функции
+        p.lead  Media Queries были представлены в спецификации CSS3. Вкратце, Media Queries позволяют веб-дизайнерам создавать условные таблицы стилей, основанные на ширине, высоте, цветах, а также на ориентации дисплея. Уже сейчас у нас есть огромный список Media Queries, который вы можете посмотреть на сайте
+            a(href="http://www.w3.org/TR/css3-mediaqueries/") W3C
+            | ,но мы сегодня будем использовать лишь некоторые их них. Давайте ознакомимся со списком часто используемых Медиа-функций, и с их предназначением:
+
+    .bs-callout.bs-callout-info
+        h2 Часто используемые Медиа-функции:
+        br
+        p
+            strong.mixin-code min-width: …
+            strong.px-code px
+            | – используется, когда ширина окна просмотра больше или равна параметру width
+        br
+        p
+            strong.mixin-code max-width: …
+            strong.px-code px
+            | – используется, когда ширина окна просмотра меньше или равна параметру width
+        br
+        p
+            strong.mixin-code min-device-width: …
+            strong.px-code px
+            | – используется, когда ширина устройства больше или равна параметру width
+        br
+        p
+            strong.mixin-code max-device-width: …
+            strong.px-code px
+            | – используется, когда ширина устройства меньше или равна параметру width
+        br
+        p
+            strong.mixin-code -webkit-min-device-pixel-ratio :
+            strong.value-code 1.5
+            | – используется для определения устройств с экранами повышенной четкости (на android или ios)
+        br
+        p
+            |... остальные можно увидеть на
+            a(href="http://www.w3.org/TR/css3-mediaqueries/")  W3C
