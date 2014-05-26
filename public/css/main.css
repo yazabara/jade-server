@@ -58,3 +58,30 @@
     color: #b11116; }
   .parallax-bg h1 {
     color: #7a43b6; }
+
+.mixin-code {
+  color: #049cdb; }
+
+.media-code {
+  color: #0064cd; }
+
+.value-code {
+  color: #7a43b6; }
+
+.px-code {
+  color: #46a546; }
+
+.def-code {
+  color: #f89406; }
+
+.alert-content-example {
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  color: #F00; }
+
+.cancel-content-example {
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  border: solid 1px #999; }

@@ -81,3 +81,42 @@
     color: $purple;
   }
 }
+
+.mixin-code {
+	color:$blue;
+}
+
+.media-code {
+	color:$blueDark;
+}
+
+.value-code {
+	color: $purple;
+}
+
+.px-code {
+	color: $green;
+}
+
+.def-code {
+	color: $orange;
+}
+
+//@content
+@mixin button-content-example() {
+	display: block;
+	font-size: 20px;
+	text-decoration: none;
+	@content;
+}
+
+.alert-content-example {
+	@include button-content-example {
+		color: #F00;
+	}
+}
+.cancel-content-example {
+	@include button-content-example {
+		border: solid 1px #999;
+	}
+}

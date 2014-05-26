@@ -1,0 +1,19 @@
+extends layouts/layout
+
+block header-block
+	include mainBlocks/header
+	include pageBlocks/responsive/parallaxBlock
+	.jumbotron
+		h1 Media queries!
+		h2.text-muted медиа-запросы и sass
+block content
+	include pageBlocks/mediaQueries/mediaCode
+	hr.featurette-divider
+	include pageBlocks/mediaQueries/defenition
+	hr.featurette-divider
+	include pageBlocks/mediaQueries/defenition2
+	hr.featurette-divider
+	include mainBlocks/responviseBrowserSupport
+
+	script(type="text/javascript", src="lib/parallax/jquery.parallax.min.js")
+	script $('#scene').parallax();

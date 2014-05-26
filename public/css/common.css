@@ -59,6 +59,33 @@
   .parallax-bg h1 {
     color: #7a43b6; }
 
+.mixin-code {
+  color: #049cdb; }
+
+.media-code {
+  color: #0064cd; }
+
+.value-code {
+  color: #7a43b6; }
+
+.px-code {
+  color: #46a546; }
+
+.def-code {
+  color: #f89406; }
+
+.alert-content-example {
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  color: #F00; }
+
+.cancel-content-example {
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  border: solid 1px #999; }
+
 .questions {
   text-align: center; }
   .questions h2 {
@@ -90,21 +117,11 @@ body {
   height: 60px; }
 
 .browser-support .supported {
-  background-color: #46a546;
-  background-image: -webkit-linear-gradient(top, #009933 0, #006600 100%);
-  background-image: linear-gradient(to bottom, #009933 0, #006600 100%);
-  background-repeat: repeat-x;
-  border: 1px solid #9ab0ba; }
+  background-color: #dff0d8 !important; }
 .browser-support .not-supported {
-  background-image: -webkit-linear-gradient(top, #d9534f 0, #c12e2a 100%);
-  background-image: linear-gradient(to bottom, #d9534f 0, #c12e2a 100%);
-  background-repeat: repeat-x;
-  border-color: #b11116; }
+  background-color: #ebccd1 !important; }
 .browser-support .partial-support {
-  background-image: -webkit-linear-gradient(top, #f0ad4e 0, #eb9316 100%);
-  background-image: linear-gradient(to bottom, #f0ad4e 0, #eb9316 100%);
-  background-repeat: repeat-x;
-  border-color: #e38d13; }
+  background-color: #faebcc !important; }
 
 .nyan-cat {
   position: fixed;
