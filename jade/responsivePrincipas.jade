@@ -3,15 +3,12 @@ block header-block
     include mainBlocks/header
     include pageBlocks/responsive/parallaxBlock
     .jumbotron
-        h1 Основные принцыпы!
+        h1 Основные принципы!
 
 block content
     include pageBlocks/responsivePrincipas/main
     include pageBlocks/responsivePrincipas/mobileFirst
-    .bs-callout.bs-callout-warning
-        h4 Внимание
-        p Приход адаптивных сайтов полностью изменил процесс разработки. Если раньше макеты дизайна сдавались как этап и уходили дальше по производственной цепочке, то для создания responsive сайта необходимо плотное взаимодействие дизайнера и front-end разработчика на большинстве этапов разработки.В зависимости от масштабов компании роли проектировщика, front-end разработчика и дизайнера могут быть смешаны.
-    hr.featurette-divider
+    include pageBlocks/responsivePrincipas/structure
 
     script(type="text/javascript", src="lib/parallax/jquery.parallax.min.js")
     script $('#scene').parallax();
