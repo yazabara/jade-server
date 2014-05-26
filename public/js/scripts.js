@@ -31,7 +31,7 @@ $(function() {
 	var color = "black";
 	var angle = 0;
 
-	var center = new Point(canvas.height / 2, canvas.width / 2, 100);
+	var center = new Point(canvas.height / 4, canvas.width / 4, 100);
 	var side = 100;
 	var halfSide = side / 2;
 
