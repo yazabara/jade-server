@@ -12,3 +12,14 @@ http://pastie.org/6625624#49,176
 http://nodeguide.ru/doc/
 
 http://culttt.com/2013/11/18/setting-sass-grunt/
+
+
+--no-cache --update $FileName$:$FileParentDir$/release/css/$FileNameWithoutExtension$.css
+$FileDir$
+$FileNameWithoutExtension$.css
+
+
+
+$FileName$ --out $ProjectFileDir$\miniq\release\pages\$FileDirPathFromParent(jade)$
+$FileDir$
+$FileNameWithoutExtension$.html

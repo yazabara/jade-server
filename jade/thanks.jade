@@ -1,0 +1,42 @@
+extends layouts/layout
+
+block header-block
+	include mainBlocks/header
+	include pageBlocks/responsive/parallaxBlock
+block content
+	.jumbotron
+		h1 Большое спасибо за внимание
+		p.lead Надеюсь данная презентация была интересная и вы для себя нашли что-то новое!
+
+	.row.featurette
+		.col-md-7
+			.bs-callout.bs-callout-info
+				h4 В заключение
+				p
+					| В заключение хочу сказать, что данный проект выложен на
+					a.mixin-code(href="https://github.com/yazabara/jade-server")  GitHub'e
+					| . Все желающие могу посмотреть, попробовать сами всё. Если будут вопросы - обращайтесь, всегда готов помочь! (
+					strong.mixin-code Yaroslav_Zabara@epam.com
+					| ).
+
+			.bs-callout.bs-callout-warning
+				h4 grunt release
+				p
+					| Не знал когда именно сказать, поэтому скажу в конце.
+					| Т.к. мы использовали grunt для сборки проекта и имели возможность создавать свои таски и манипулировать теми, что подключили,
+					| я сделал отдельный таск
+					strong.mixin-code  grunt release
+					| Который собираем html-файлы, собирает и минимизирует js,сss и создает папку release с страничками и ресурсами, готовую для эксплуатации.
+					| Это очень полезно для интеграторов, либо для ленивых, кто не захочет ставить окружение.
+		.col-md-5
+			a(href="images/Github.png",data-lightbox="example-set" data-title="https://github.com/yazabara/jade-server",data-src='holder.js/500x500/auto' )
+				img.featurette-image.img-responsive(data-src="holder.js/500x500/auto",alt="500x500",src="images/Github.png")
+	hr.featurette-divider
+	//.bs-callout.bs-callout-info
+	//	h4 Можем попробовать сделать сами!
+	//	| Если у нас осталось еще время, мы можем попробовать вместе сделать респонсив страничку. На 4ом курсе у многих в этих стенах ведет Семенов Андрей Борисович предмет, который называется
+	//	| "Основы графики" или что-то вроде. Так вот, на обном из первых занятий - будет задана задачка повращать в 3д какую-либо фигуру.
+	//	| Как офигенный фронт-энд разработчики, мы , конечно, решили сделать эту задачу на вебе.
+	//	| Будем считать, что js, который рисуте на канвасе все нужное нам - уже есть. Более того мы его подключили к странице. Осталось сделать красивый респонсив дизайн.
+	script(type="text/javascript", src="lib/parallax/jquery.parallax.min.js")
+	script $('#scene').parallax();
