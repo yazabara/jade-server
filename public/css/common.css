@@ -41,10 +41,6 @@
 .cat3 {
   background-image: url(../images/cats/ex3.png); }
 
-.capabilities {
-  max-width: 600px;
-  margin: auto; }
-
 .featurette.container {
   text-align: center; }
   .featurette.container img {
@@ -142,3 +138,9 @@ body {
   width: 51px;
   height: 20px;
   z-index: 10000; }
+
+#canvas {
+  max-width: 100%;
+  margin: auto;
+  display: block;
+  border: 1px solid red; }

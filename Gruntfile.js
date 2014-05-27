@@ -82,7 +82,7 @@ module.exports = function (grunt) {
 				"files": [{
 					"expand": true,
 					"cwd": "public/css/",
-					"src": ["common.css"],
+					"src": ["common.css","grids.css"],
 					"dest": "release/css/"
 				}]
 			}

@@ -1,17 +1,18 @@
 extends layouts/layout
 
-block header-block
-    include pageBlocks/environment/header
-
 block content
-    include pageBlocks/environment/nodeJsBlock
-    include pageBlocks/environment/gruntBlock
-    include pageBlocks/environment/jadeBlock
-    include pageBlocks/environment/sassJade
-    hr.featurette-divider
-    include mainBlocks/questions
-    hr.featurette-divider
-    .jumbotron
-        h2 Пора уже отзывчивый веб-дизайн рассматривать
-        p
-            a.btn.btn-lg.btn-success(href="responvise" role="button") Согласны?
+	.jumbotron
+		h1 Окружение
+		h2.text-muted environment
+	//include pageBlocks/environment/nodeJsBlock
+	//include pageBlocks/environment/gruntBlock
+	//include pageBlocks/environment/jadeBlock
+	//include pageBlocks/environment/sassJade
+	include pageBlocks/environment/main
+	hr.featurette-divider
+	include mainBlocks/questions
+	hr.featurette-divider
+	.jumbotron
+		h2 Пора уже отзывчивый веб-дизайн рассматривать
+		p
+			a.btn.btn-lg.btn-success(href="responvise" role="button") Согласны?

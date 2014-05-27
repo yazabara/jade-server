@@ -1,0 +1,21 @@
+extends layouts/layout
+
+block headSection
+	include mainBlocks/headSection
+	link(media="all", rel="stylesheet", type="text/css", href='css/grids.css')
+	include mainBlocks/mixins
+
+block header-block
+	include mainBlocks/header
+	include pageBlocks/responsive/parallaxBlock
+
+block content
+	.jumbotron
+		h1 Даешь Резину!
+		include pageBlocks/rubber/main
+		include pageBlocks/rubber/bootstrapGrids
+		h1 Медиа-запросы!
+		p
+			a.btn.btn-lg.btn-success(href="mediaQueries" role="button") Все гениальное просто!
+	script(type="text/javascript", src="lib/parallax/jquery.parallax.min.js")
+	script $('#scene').parallax();

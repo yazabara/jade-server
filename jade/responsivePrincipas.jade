@@ -1,14 +1,17 @@
 extends layouts/layout
 block header-block
-    include mainBlocks/header
-    include pageBlocks/responsive/parallaxBlock
-    .jumbotron
-        h1 Основные принципы!
+	include mainBlocks/header
+	include pageBlocks/responsive/parallaxBlock
+	.jumbotron
+		h1 Основные принципы!
 
 block content
-    include pageBlocks/responsivePrincipas/mobileFirst
-    include pageBlocks/responsivePrincipas/structure
-    include pageBlocks/responsivePrincipas/main
-    include mainBlocks/questions
-    script(type="text/javascript", src="lib/parallax/jquery.parallax.min.js")
-    script $('#scene').parallax();
+	include pageBlocks/responsivePrincipas/mobileFirst
+	include pageBlocks/responsivePrincipas/structure
+	include pageBlocks/responsivePrincipas/main
+	.jumbotron
+		h1 Перейдем к конкретике
+		p
+			a.btn.btn-lg.btn-success(href="rubber" role="button") Резиновая сетка и гибкие изображения
+	script(type="text/javascript", src="lib/parallax/jquery.parallax.min.js")
+	script $('#scene').parallax();

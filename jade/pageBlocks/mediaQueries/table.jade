@@ -1,0 +1,58 @@
+.bs-callout.bs-callout-info
+	h4 Динамические классы
+	p
+		| Показанная здесь таблица классов обеспечивает динамику для различных устройств и их работу в связке с сеткой макета и медиа-запросами (разделено по устройствам). Данные классы находятся в
+		code responsive.less
+		| .
+
+
+table.table.table-bordered.table-striped.responsive-utilities
+	thead
+		tr
+			th Класс
+			th
+				| Телефоны
+				small 480px и меньше
+			th
+				| Наладонники (Планшеты)
+				small 767px и меньше
+			th
+				| Ноутбуки и десктопы
+				small 768px и больше
+		tbody
+			tr
+				th
+					code .visible-phone
+				td.is-visible Виден
+				td.is-hidden Скрыто
+				td.is-hidden Скрыто
+			tr
+				th
+					code .visible-tablet
+				td.is-hidden Скрыто
+				td.is-visible Виден
+				td.is-hidden Скрыто
+			tr
+				th
+					code .visible-desktop
+				td.is-hidden Скрыто
+				td.is-hidden Скрыто
+				td.is-visible Виден
+			tr
+				th
+					code .hidden-phone
+				td.is-hidden Скрыто
+				td.is-visible Виден
+				td.is-visible Виден
+			tr
+				th
+					code .hidden-tablet
+				td.is-visible Виден
+				td.is-hidden Скрыто
+				td.is-visible Виден
+			tr
+				th
+					code .hidden-desktop
+				td.is-visible Виден
+				td.is-visible Виден
+				td.is-hidden Скрыто

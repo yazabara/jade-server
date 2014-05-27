@@ -1,0 +1,23 @@
+.bs-callout.bs-callout-info
+	h2 Настройка окружения
+	p Буквально вчера настраивал окружение на ноутбуке - и настройка заняла всего 30 минут, причем, большее время заняла загрузка , а не установка
+.bs-callout.bs-callout-info
+	p.lead Node js
+	p Скачиваем nodeJs с официального сайта(http://nodejs.org/). Устанавливаем - если автоматически не добавиться переменная окружения - добавляем.
+.bs-callout.bs-callout-info
+	p.lead Ruby
+	p Скачиваем Ruby (он нам пригодится для работы с SASS) с официального сайта так же ставим(http://rubyinstaller.org/).
+.bs-callout.bs-callout-info
+	p.lead SASS
+	p Устанавливаем SASS(http://sass-lang.com/)
+.bs-callout.bs-callout-info
+	p.lead NPM (node package modules)
+	p Устанавливаем необходимые npm модули(для конкретно нашего примера-сайта - есть bat-файл со всеми зависимостями)
+	pre
+		| ECHO Installing npm and plugins was started
+		| npm install -g supervisor && npm install -g grunt-cli && npm install && npm install -g matchdep && npm install requirejs && npm install underscore && npm install async
+		| ECHO Installing was finished
+		| pause
+.bs-callout.bs-callout-warning
+	p.lead IDE
+	p Для разработки так же необходимо поставить какую-либо IDE, я рекомендую пользоваться intellij idea(webstorm).
