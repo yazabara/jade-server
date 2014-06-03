@@ -1,7 +1,7 @@
 define(['require', 'express'], function (require, express) {
 	var app = express();
 
-	app.set('port', process.env.PORT || 8000);
+	app.set('port', process.env.PORT || 8859);
 	app.set('staticFolder', './public/');
 
 	app.set('allowedExt', {
