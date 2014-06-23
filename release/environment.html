@@ -1,0 +1,95 @@
+define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
+
+
+<head>
+  <meta http-equiv="Content-Language"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="keywords" content="Тестовый проект"/>
+  <meta name="description" content="Тестовый проект"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Test jade poject</title>
+  <!--link(rel="shortcut icon",href="images/favicon.ico)-->
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/lightbox/css/lightbox.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/docs.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="css/common.css"/>
+  <script type="text/javascript" src="lib/jquery/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/lightbox/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <!--TODO fix responsive-->
+</head>
+<body>
+  <!--.nyan-cat-->
+  <!--TODO mixin and blocks-->
+  <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Отзывчивый веб-дизайн</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Отзывчивый веб-дизайн</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="page-content">
+      <div class="jumbotron">
+        <h1>Окружение</h1>
+        <h2 class="text-muted">environment</h2>
+      </div>
+      <!--include pageBlocks/environment/nodeJsBlock-->
+      <!--include pageBlocks/environment/gruntBlock-->
+      <!--include pageBlocks/environment/jadeBlock-->
+      <!--include pageBlocks/environment/sassJade-->
+      <div class="bs-callout bs-callout-info">
+        <h2>Настройка окружения</h2>
+        <p>Буквально вчера настраивал окружение на ноутбуке - и настройка заняла всего 30 минут, причем, большее время заняла загрузка , а не установка</p>
+      </div>
+      <div class="bs-callout bs-callout-info">
+        <p class="lead">Node js</p>
+        <p>Скачиваем nodeJs с официального сайта(http://nodejs.org/). Устанавливаем - если автоматически не добавиться переменная окружения - добавляем.</p>
+      </div>
+      <div class="bs-callout bs-callout-info">
+        <p class="lead">Ruby</p>
+        <p>Скачиваем Ruby (он нам пригодится для работы с SASS) с официального сайта так же ставим(http://rubyinstaller.org/).</p>
+      </div>
+      <div class="bs-callout bs-callout-info">
+        <p class="lead">SASS</p>
+        <p>Устанавливаем SASS(http://sass-lang.com/)</p>
+      </div>
+      <div class="bs-callout bs-callout-info">
+        <p class="lead">NPM (node package modules)</p>
+        <p>Устанавливаем необходимые npm модули(для конкретно нашего примера-сайта - есть bat-файл со всеми зависимостями)</p>
+        <pre>ECHO Installing npm and plugins was started
+npm install -g supervisor && npm install -g grunt-cli && npm install && npm install -g matchdep && npm install requirejs && npm install underscore && npm install async
+ECHO Installing was finished
+pause</pre>
+      </div>
+      <div class="bs-callout bs-callout-warning">
+        <p class="lead">IDE</p>
+        <p>Для разработки так же необходимо поставить какую-либо IDE, я рекомендую пользоваться intellij idea(webstorm).</p>
+      </div>
+      <hr class="featurette-divider"/>
+      <div id="questions-id" class="questions row">
+        <div class="col-md-8">
+          <h2>Вопросы?</h2>
+        </div>
+        <div class="col-md-4"><img data-src="holder.js/200x200/auto/sky" alt="200x200" src="images/cats/6.jpg" class="img-responsive img-circle"/></div>
+      </div>
+      <hr class="featurette-divider"/>
+      <div class="jumbotron">
+        <h2>Пора уже отзывчивый веб-дизайн рассматривать</h2>
+        <p><a href="responvise" role="button" class="btn btn-lg btn-success">Согласны?</a></p>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div id="footer" class="navbar-inverse">
+      <div class="container"><span class="text-muted">Created by Yaroslav Zabara. Maybe I will write some info</span></div>
+    </div>
+  </footer>
+</body>
+
+return this["JST"];
+
+});

@@ -1,0 +1,101 @@
+define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
+
+
+<head>
+  <meta http-equiv="Content-Language"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="keywords" content="Тестовый проект"/>
+  <meta name="description" content="Тестовый проект"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Test jade poject</title>
+  <!--link(rel="shortcut icon",href="images/favicon.ico)-->
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/lightbox/css/lightbox.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/docs.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="css/common.css"/>
+  <script type="text/javascript" src="lib/jquery/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/lightbox/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <!--TODO fix responsive-->
+</head>
+<body>
+  <!--.nyan-cat-->
+  <!--TODO mixin and blocks-->
+  <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Отзывчивый веб-дизайн</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Отзывчивый веб-дизайн</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="page-content">
+      <div class="jumbotron cat-background cat1">
+        <h1>Jade</h1>
+        <h2 class="text-muted">Node template engine</h2>
+      </div>
+      <div class="row">
+        <div class="capabilities bs-callout bs-callout-info">
+          <h2>Возможности</h2>
+          <ul>
+            <li>работает на клиентской стороне</li>
+            <li>отличная читабельность</li>
+            <li>гибкая система отступов</li>
+            <li>раскрытие блоков</li>
+            <li>примеси</li>
+            <li>статические инклюды</li>
+            <li>интерполяция в аттрибутах</li>
+            <li>из соображений безопасности по умолчанию все экранируется</li>
+            <li>контекстные сообщения об ошибках как во время компиляции так и во время выполнения</li>
+            <li>утилита для компиляции jade в html из командной строки</li>
+            <li>режим HTML5 (используйте doctype<em>!!! 5</em>)</li>
+            <li>кеширование в памяти (опционально)</li>
+            <li>комбинирование динамических и статических CSS-классов</li>
+            <li>манипуляции с деревом парсинга через<em>filters</em></li>
+            <li>поддержка<a href="http://express-js.ru">Express JS</a>“из коробки”</li>
+            <li>прозрачный механизм итерации по объектам, массивам, и даже неисчислимым типам через<code>each</code></li>
+            <li>блочные комментарии</li>
+            <li>фильтры AST</li>
+            <li>фильтры
+              <ul>
+                <li>:sass - нужно установить<a href="http://github.com/visionmedia/sass.js">sass.js</a></li>
+                <li>:less - нужно установить<a href="http://github.com/cloudhead/less.js">less.js</a></li>
+                <li>:markdown - нужно установить<a href="http://github.com/evilstreak/markdown-js">markdown-js</a>или<a href="http://github.com/visionmedia/node-discount">node-discount</a></li>
+                <li>:cdata</li>
+                <li>:coffeescript - нужно установить<a href="http://jashkenas.github.com/coffee-script/">coffee-script</a></li>
+              </ul>
+            </li>
+            <li><a href="https://github.com/digitaltoad/vim-jade">подсветка синтаксиса для Vim</a></li>
+            <li><a href="http://github.com/miksago/jade-tmbundle">TextMate Bundle</a></li>
+            <li><a href="http://tjholowaychuk.com/post/1004255394/jade-screencast-template-engine-for-nodejs">скринкасты</a></li>
+            <li><a href="https://github.com/donpark/html2jade">html2jade конвертер</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h2>Как использовать все эти возможности?</h2>
+        <h2 class="text-muted">Предлагаю рассмотреть на примере этого простенького "сайта-презентации"</h2>
+        <p>а дальше можно рассмотреть аналогичным образом sass</p>
+        <p><a href="/sass" role="button" class="btn btn-lg btn-success">Sass</a></p>
+      </div>
+      <div id="questions-id" class="questions row">
+        <div class="col-md-8">
+          <h2>Вопросы?</h2>
+        </div>
+        <div class="col-md-4"><img data-src="holder.js/200x200/auto/sky" alt="200x200" src="images/cats/6.jpg" class="img-responsive img-circle"/></div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div id="footer" class="navbar-inverse">
+      <div class="container"><span class="text-muted">Created by Yaroslav Zabara. Maybe I will write some info</span></div>
+    </div>
+  </footer>
+</body>
+
+return this["JST"];
+
+});

@@ -1,0 +1,71 @@
+define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
+
+
+<head>
+  <meta http-equiv="Content-Language"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="keywords" content="Тестовый проект"/>
+  <meta name="description" content="Тестовый проект"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Test jade poject</title>
+  <!--link(rel="shortcut icon",href="images/favicon.ico)-->
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/lightbox/css/lightbox.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/docs.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="css/common.css"/>
+  <script type="text/javascript" src="lib/jquery/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/lightbox/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <!--TODO fix responsive-->
+</head>
+<body>
+  <!--.nyan-cat-->
+  <!--TODO mixin and blocks-->
+  <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Отзывчивый веб-дизайн</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Отзывчивый веб-дизайн</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="page-content">
+      <div class="jumbotron cat-background cat2">
+        <h1>Sass</h1>
+        <h2 class="text-muted">Syntactically Awesome StyleSheets</h2>
+      </div>
+        <hr id="sass-id" class="featurette-divider"/>
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Sass<span class="text-muted">  просто и удобно</span></h2>
+            <p class="lead">Sass имеет ряд преимуществ перед css. Начну с @import. Сам по себе @import не является преимуществом sass перед css, но его использование становится еще более оправданным потому, что возможно подключать по мимо sass-файла c ресетами и sass-файла c типографикой, sass-файл с «константами» , четвертый sass-файл с «абстрактными классами» . Потом это все пакуется в одну готовую css-ку. Что избавляет от работы с огромным кодом.</p>
+          </div>
+          <div class="col-md-5"><img data-src="holder.js/500x500/auto" alt="500x500" src="images/sass.PNG" class="featurette-image img-responsive"/></div>
+        </div>
+      <div class="jumbotron">
+        <h2>Практика</h2>
+        <h2 class="text-muted">Так же предлагаю рассмотреть на примере этого простенького "сайта-презентации"</h2>
+        <p>Основные технологии выбрали - что дальше?</p>
+        <p><a href="/twoWays" role="button" class="btn btn-lg btn-success">Далее</a></p>
+      </div>
+      <div id="questions-id" class="questions row">
+        <div class="col-md-8">
+          <h2>Вопросы?</h2>
+        </div>
+        <div class="col-md-4"><img data-src="holder.js/200x200/auto/sky" alt="200x200" src="images/cats/6.jpg" class="img-responsive img-circle"/></div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div id="footer" class="navbar-inverse">
+      <div class="container"><span class="text-muted">Created by Yaroslav Zabara. Maybe I will write some info</span></div>
+    </div>
+  </footer>
+</body>
+
+return this["JST"];
+
+});

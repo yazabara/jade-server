@@ -1,0 +1,149 @@
+define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
+
+
+<head>
+  <meta http-equiv="Content-Language"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="keywords" content="Тестовый проект"/>
+  <meta name="description" content="Тестовый проект"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Test jade poject</title>
+  <!--link(rel="shortcut icon",href="images/favicon.ico)-->
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/lightbox/css/lightbox.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/docs.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="css/common.css"/>
+  <script type="text/javascript" src="lib/jquery/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/lightbox/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <link media="all" rel="stylesheet" type="text/css" href="css/grids.css"/>
+  <!--TODO fix responsive-->
+</head>
+<body>
+  <!--.nyan-cat-->
+  <!--TODO mixin and blocks-->
+  <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Отзывчивый веб-дизайн</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Отзывчивый веб-дизайн</a>
+      </div>
+    </div>
+  </nav>
+    <div class="jumbotron parallax-bg table-responsive">
+      <ul id="scene">
+        <li data-depth="0.80" class="layer"><img src="images/parallax/layer1.png"/></li>
+        <li data-depth="0.20" class="layer"><img src="images/parallax/layer2.png"/></li>
+        <li data-depth="0.40" class="layer"><img src="images/parallax/layer3.png"/></li>
+        <li data-depth="0.60" class="layer"><img src="images/parallax/layer4.png"/></li>
+        <li data-depth="0.150" class="layer">
+          <h1>Responsive web design</h1>
+        </li>
+        <li data-depth="0.190" class="layer"><img src="images/parallax/light-orange.png"/></li>
+        <li data-depth="0.140" style="" class="layer">
+          <p>отзывчивый вед-дизайн</p>
+        </li>
+      </ul>
+    </div>
+  <div class="container">
+    <div class="page-content">
+      <div class="jumbotron">
+        <h1>Даешь Резину!</h1>
+        <div class="bs-callout bs-callout-info">
+          <h4>Гибкие изображения (flexible images)</h4>Подстраивают свои размеры под блок родителя. Основная идея в неочевидном применении свойства { max-width: 100% }. Изображение с img { max-width: 100% } никогда не вылезет из своего блока-родителя.
+          Если блок-родитель меньше, чем размеры img, то изображение пропорционально уменьшится. Этот принцип применим как для img, так и для embed, object, video.
+        </div>
+        <div class="bs-callout bs-callout-danger">
+          <h4>На деле это значит:</h4>Это значит, что картинка или другой подобный ресурс должен занимать ровно столько, сколько он может.
+        </div>
+        <div class="bs-callout bs-callout-info">
+          <h4>Гибкий макет на основе сетки (flexible, grid-based layout)</h4>Основная идея — формула для вычисления пропорций в процентах «target / context = result».
+          Например, у нас есть макет psd с шириной 1000px. В нем есть два блока: один слева шириной 270px, другой справа 730px. Сверстаем мы их так:
+          <pre style="text-align: left;">.leftcolumn {
+ width: 27%; /* 270px / 1000px = 0,27 */
+ float: left;
+}</pre>
+          <pre style="text-align: left;">rightcolumn {
+ width: 73%; /* 730px / 1000px = 0,73 */
+ float: right;
+}</pre>
+        </div>
+        <div class="bs-callout bs-callout-danger">
+          <h4>Как реально это понимать?</h4>Да все просто, любой кусок должен заниматься ровно столько, сколько прописано в спеке на любом разрешении. Т.е. Занимает какую-то долю от пространства.
+        </div>
+        <div class="bs-callout bs-callout-info">
+          <h4>Не изобретаем велосипед!</h4>Responsove design не настолько молодой, чтобы все делать самому. Используйте уже созданные, проверенные фрэймворки.
+          Ниче приведен пример резиновой сетки bootstrap'a , который используется в нашей презентации. (http://getbootstrap.com/)
+        </div>
+        <div class="bs-callout bs-callout-info">В bootstrap'e изначально существует сетка из 12 частей, которой можно оперировать, комбинировать и использовать</div>
+        <div class="row">
+          <div class="col-md-4">.col-md-4</div>
+          <div class="col-md-4">.col-md-4</div>
+          <div class="col-md-4">.col-md-4</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">.col-md-3</div>
+          <div class="col-md-6">.col-md-6</div>
+          <div class="col-md-3">.col-md-3</div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">.col-md-8</div>
+          <div class="col-md-4">.col-md-4</div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">.col-md-8
+            <div class="row">
+              <div class="col-md-6">.col-md-6</div>
+              <div class="col-md-6">.col-md-6</div>
+            </div>
+          </div>
+          <div class="col-md-4">.col-md-4</div>
+        </div>
+        <div class="bs-callout bs-callout-info">
+          Так же в bootstrap-сетке предусмотрено 4ре класса, отвечающие за конкретные девайся, ими так же можно оперировать
+          xs (phones), sm (tablets), md (desktops), and lg (larger desktops).
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+          <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+          <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+          <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">.col-xs-6</div>
+          <div class="col-xs-6">.col-xs-6</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-lg-8">.col-xs-12 .col-sm-6 .col-lg-8</div>
+          <div class="col-xs-6 col-lg-4">.col-xs-6 .col-lg-4</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+          <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+          <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+        </div>
+        <div class="bs-callout bs-callout-danger">
+          <h4>Использование готовых фрэймворков - рекомендация</h4>Использование готовых фрэйморвок это прежде всего рекомендация. Если необходимо сделать что-то более изысканное - то , конечно, придется писать собственно ручную сетку.
+        </div>
+        <h1>Медиа-запросы!</h1>
+        <p><a href="mediaQueries" role="button" class="btn btn-lg btn-success">Все гениальное просто!</a></p>
+      </div>
+      <script type="text/javascript" src="lib/parallax/jquery.parallax.min.js"></script>
+      <script>$('#scene').parallax();</script>
+    </div>
+  </div>
+  <footer class="footer">
+    <div id="footer" class="navbar-inverse">
+      <div class="container"><span class="text-muted">Created by Yaroslav Zabara. Maybe I will write some info</span></div>
+    </div>
+  </footer>
+</body>
+
+return this["JST"];
+
+});

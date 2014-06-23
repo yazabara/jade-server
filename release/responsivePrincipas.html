@@ -1,0 +1,127 @@
+define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
+
+
+<head>
+  <meta http-equiv="Content-Language"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="keywords" content="Тестовый проект"/>
+  <meta name="description" content="Тестовый проект"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Test jade poject</title>
+  <!--link(rel="shortcut icon",href="images/favicon.ico)-->
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/lightbox/css/lightbox.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/docs.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="css/common.css"/>
+  <script type="text/javascript" src="lib/jquery/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/lightbox/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <!--TODO fix responsive-->
+</head>
+<body>
+  <!--.nyan-cat-->
+  <!--TODO mixin and blocks-->
+  <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Отзывчивый веб-дизайн</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Отзывчивый веб-дизайн</a>
+      </div>
+    </div>
+  </nav>
+    <div class="jumbotron parallax-bg table-responsive">
+      <ul id="scene">
+        <li data-depth="0.80" class="layer"><img src="images/parallax/layer1.png"/></li>
+        <li data-depth="0.20" class="layer"><img src="images/parallax/layer2.png"/></li>
+        <li data-depth="0.40" class="layer"><img src="images/parallax/layer3.png"/></li>
+        <li data-depth="0.60" class="layer"><img src="images/parallax/layer4.png"/></li>
+        <li data-depth="0.150" class="layer">
+          <h1>Responsive web design</h1>
+        </li>
+        <li data-depth="0.190" class="layer"><img src="images/parallax/light-orange.png"/></li>
+        <li data-depth="0.140" style="" class="layer">
+          <p>отзывчивый вед-дизайн</p>
+        </li>
+      </ul>
+    </div>
+  <div class="jumbotron">
+    <h1>Основные принципы!</h1>
+  </div>
+  <div class="container">
+    <div class="page-content">
+      <hr id="mobileFirst" class="featurette-divider"/>
+      <div class="row featurette">
+        <div class="col-md-5"><img data-src="holder.js/500x500/auto" alt="500x500" src="images/aba-06.png" class="featurette-image img-responsive"/></div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Сначала мобильные<span class="text-muted">&nbspmibile first</span></h2>
+          <p class="alert alert-warning">Говорим мы о мобильном вебе или об обычном, базовые принципы информационной архитектуры — правильная разметка кода, баланс ширины и глубины, основы поведения пользователя — остаются неизменными. Но для правильной организации взаимодействия с мобильным вебом также необходимо:</p>
+          <div class="bs-callout bs-callout-info">
+            <h4>Хорошо понимать, как и почему люди используют мобильные устройства;</h4>
+            <p>В книге Tapworthy («Куда следует нажимать») Джош Кларк уделил особое внимание трем основным поведенческим моделям владельцев мобильных устройств: «Микрозадачи», «Ориентирование на местности» и «Мне скучно». Эти модели практически совпадают с поведенческой классификацией, принятой в компании Google: «Мне это нужно срочно», «Я повторяю то, что часто делаю» и «Я делаю это, потому что мне больше нечем заняться».</p>
+          </div>
+          <div class="bs-callout bs-callout-info">
+            <h4>Отдавать приоритет контенту перед навигацией;</h4>
+            <p>Общее правило при разработке мобильных приложений гласит: контент всегда должен иметь приоритет над навигацией.За какой бы информацией люди ни приходили на ваш сайт — будь то новости, часто обновляющиеся данные о котировках ценных бумаг и результатах спортивных матчей, сведения местного характера или другие виды контента, — им нужен немедленный ответ: на то, чтобы изучать карту вашего сайта, у них просто нет времени.</p>
+          </div>
+          <div class="bs-callout bs-callout-info">
+            <h4>Обеспечивать ясность и лаконичность контента.</h4>
+            <p>Уменьшив число навигационных опций на экранах мобильных устройств и тем самым снизив вероятность, что пользователь, спеша выполнить задачу, нажмет не на ту кнопку, вы сможете предотвратить множество ошибок.</p>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h1>Структура мобильного сайта</h1>
+        <div class="bs-callout bs-callout-danger">Проектируя&nbsp<strong>мобильный сайт</strong>, продумайте, как совместить в дизайне особенности поведения владельцев мобильных устройств и их потребительские нужды.</div>
+        <div class="bs-callout bs-callout-warning">Анализ основных способов взаимодействия (поиск, изучение/развлечение, проверка/статус и редактирование/создание) позволит понять, как владельцы мобильных устройств будут использовать ваш сайт, а значит, разработать структуру, соответствующую их потребностям.</div>
+        <div class="bs-callout bs-callout-warning">Уделив внимание в первую очередь контенту и лишь потом навигации, вы предоставите посетителям возможность максимально быстро получить доступ к нужной информации или произвести необходимые действия.</div>
+        <div class="bs-callout bs-callout-warning">Продуманное и правильно расположенное навигационное меню помогает пользователям более детально изучить содержание страницы и облегчает переход к другим разделам сайта.</div>
+        <div class="bs-callout bs-callout-warning">Уменьшение числа навигационных опций и акцент на выполнение основных задач позволяют пользователям быстрее достигать поставленных целей. Это особенно важно, когда у них мало времени или они находятся не в самых удобных условиях.</div>
+        <div class="bs-callout bs-callout-warning">Но даже если владелец мобильного устройства заходит на ваш сайт в свободное время, находясь у себя дома и удобно расположившись в кресле, будьте уверены: он по достоинству оценит простоту и функциональность вашего дизайна!</div>
+        <div class="bs-callout bs-callout-info">Продуманная структура мобильного сайта позволяет пользователям быстро находить необходимую информацию. Отыскав ее, они начинают действовать.</div>
+      </div>
+      <hr id="princ" class="featurette-divider"/>
+      <div class="row featurette">
+        <div class="col-md-5"><img data-src="holder.js/500x500/auto" alt="500x500" src="images/responsive_web_design_russian_version_book_cover.png" class="featurette-image img-responsive"/></div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Основа - резина<span class="text-muted">&nbspи не только</span></h2>
+          <div class="bs-callout bs-callout-info">
+            <h4>Гибкий макет на основе сетки (flexible, grid-based layout)</h4>
+            <p>
+              Основная идея — формула для вычисления пропорций в процентах «target / context = result». Например, у нас есть макет psd с шириной 1000px. В нем есть два блока: один слева шириной 270px, другой справа 730px. Сверстаем мы их так:
+              .leftcolumn { width: 27%; /* 270px / 1000px = 0,27 */ float: left; }
+              rightcolumn { width: 73%; /* 730px / 1000px = 0,73 */ float: right; }
+            </p>
+          </div>
+          <div class="bs-callout bs-callout-info">
+            <h4>Гибкие изображения (flexible images)</h4>
+            <p>
+              Подстраивают свои размеры под блок родителя. Основная идея в неочевидном применении свойства { max-width: 100% }. Изображение с img { max-width: 100% } никогда не вылезет из своего блока-родителя.
+              Если блок-родитель меньше, чем размеры img, то изображение пропорционально уменьшится. Этот принцип применим как для img, так и для embed, object, video.
+            </p>
+          </div>
+          <div class="bs-callout bs-callout-info">
+            <h4>Медиазапросы (CSS3 media queries)</h4>
+            <p>Нужны для отображения макета, оптимизированного под разрешение, с которого в данный момент этот сайт смотрится. Это часть стандарта CSS, которая позволяет применять стили на основе информации о разрешении устройства.</p>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h1>Перейдем к конкретике</h1>
+        <p><a href="rubber" role="button" class="btn btn-lg btn-success">Резиновая сетка и гибкие изображения</a></p>
+      </div>
+      <script type="text/javascript" src="lib/parallax/jquery.parallax.min.js"></script>
+      <script>$('#scene').parallax();</script>
+    </div>
+  </div>
+  <footer class="footer">
+    <div id="footer" class="navbar-inverse">
+      <div class="container"><span class="text-muted">Created by Yaroslav Zabara. Maybe I will write some info</span></div>
+    </div>
+  </footer>
+</body>
+
+return this["JST"];
+
+});

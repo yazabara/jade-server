@@ -1,0 +1,813 @@
+define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
+
+
+<head>
+  <meta http-equiv="Content-Language"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="keywords" content="Тестовый проект"/>
+  <meta name="description" content="Тестовый проект"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Test jade poject</title>
+  <!--link(rel="shortcut icon",href="images/favicon.ico)-->
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/lightbox/css/lightbox.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/docs.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="css/common.css"/>
+  <script type="text/javascript" src="lib/jquery/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/lightbox/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <!--TODO fix responsive-->
+</head>
+<body>
+  <!--.nyan-cat-->
+  <!--TODO mixin and blocks-->
+  <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Отзывчивый веб-дизайн</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Отзывчивый веб-дизайн</a>
+      </div>
+    </div>
+  </nav>
+    <div class="jumbotron parallax-bg table-responsive">
+      <ul id="scene">
+        <li data-depth="0.80" class="layer"><img src="images/parallax/layer1.png"/></li>
+        <li data-depth="0.20" class="layer"><img src="images/parallax/layer2.png"/></li>
+        <li data-depth="0.40" class="layer"><img src="images/parallax/layer3.png"/></li>
+        <li data-depth="0.60" class="layer"><img src="images/parallax/layer4.png"/></li>
+        <li data-depth="0.150" class="layer">
+          <h1>Responsive web design</h1>
+        </li>
+        <li data-depth="0.190" class="layer"><img src="images/parallax/light-orange.png"/></li>
+        <li data-depth="0.140" style="" class="layer">
+          <p>отзывчивый вед-дизайн</p>
+        </li>
+      </ul>
+    </div>
+  <div class="jumbotron">
+    <h1>Media queries!</h1>
+    <h2 class="text-muted">медиа-запросы и sass</h2>
+  </div>
+  <div class="container">
+    <div class="page-content">
+      <div class="row">
+        <div class="bs-callout bs-callout-danger">
+          <h2>Примеры использования  media-запросов с sass</h2>
+        </div>
+        <pre><strong class="mixin-code">@mixin</strong><strong class="media-code">&nbspmediaMobile {</strong><br/><strong class="media-code">   @media</strong><strong class="media-code">&nbsponly screen and (max-width:</strong><strong class="value-code">767</strong><strong class="px-code">px</strong><strong class="media-code">) {</strong><br/><strong class="media-code">       @content;</strong><br/>   }<br/>}</pre>
+        <pre><strong class="mixin-code">@mixin</strong><strong class="media-code">&nbspmediaDesktop {</strong><br/><strong class="media-code">   @media</strong><strong class="media-code">&nbsponly screen and (min-width:</strong><strong class="value-code">1024</strong><strong class="px-code">px</strong><strong class="media-code">) {</strong><br/><strong class="media-code">       @content;</strong><br/>   }<br/>}</pre>
+        <pre><strong class="mixin-code">@mixin</strong><strong class="media-code">&nbspmediaTabletDesktop {</strong><br/><strong class="media-code">   @media</strong><strong class="media-code">&nbsponly screen and (min-width:</strong><strong class="value-code">767</strong><strong class="px-code">px</strong><strong class="media-code">) {</strong><br/><strong class="media-code">       @content;</strong><br/>   }<br/>}</pre>
+        <pre><strong class="mixin-code">@mixin</strong><strong class="media-code">&nbspmediaTableDeviceWidth {</strong><br/><strong class="media-code">   @media</strong><strong class="media-code">&nbsponly screen and (min-device-width:</strong><strong class="value-code">768</strong><strong class="px-code">px</strong><strong class="media-code">)</strong><strong class="media-code">and (max-device-width:</strong><strong class="value-code">1024</strong><strong class="px-code">px</strong><strong class="media-code">)</strong><strong class="media-code">{</strong><br/><strong class="media-code">       @content;</strong><br/>   }<br/>}</pre>
+        <!--pre-->
+        <!--    strong.mixin-code @mixin-->
+        <!--    strong.media-code &nbspborder-radius(-->
+        <!--    strong.value-code $radius-->
+        <!--    strong.media-code ) {-->
+        <!--    br-->
+        <!--    strong.def-code    -webkit-border-radius:-->
+        <!--    strong.value-code $radius;-->
+        <!--    br-->
+        <!--    strong.def-code    -moz-border-radius:-->
+        <!--    strong.value-code $radius;-->
+        <!--    br-->
+        <!--    strong.def-code    border-radius:-->
+        <!--    strong.value-code  $radius;-->
+        <!--    br-->
+        <!--    strong.media-code }-->
+        <!---->
+        <!--pre-->
+        <!--    strong.mixin-code @function-->
+        <!--    strong.media-code  parseInt(-->
+        <!--    strong.value-code $n-->
+        <!--    strong.media-code ) {-->
+        <!--    strong.value-code /* 2 */-->
+        <!--    br-->
+        <!--    strong.media-code    @return-->
+        <!--    strong.value-code &nbsp$n / ($n * 0 + 1);-->
+        <!--    br-->
+        <!--    strong.media-code }-->
+      </div>
+      <hr class="featurette-divider"/>
+      <div class="row">
+        <div class="bs-callout bs-callout-danger">
+          <h2>Синтаксис</h2>
+          <p class="lead">Все запросы начинаются с правила @media, после чего следует условие, в котором используются типы носителей, логические операторы и медиа-функции.</p>
+        </div>
+        <div class="bs-callout bs-callout-info">
+          <h2>Типы носителей:</h2><br/>
+          <p><strong class="mixin-code">all</strong> Все типы. Это значение используется по умолчанию.</p><br/>
+          <p><strong class="mixin-code">braille</strong> Устройства, основанные на системе Брайля, которые предназначены для чтения слепыми людьми.</p><br/>
+          <p><strong class="mixin-code">embossed</strong> Принтеры, использующие для печати систему Брайля.</p><br/>
+          <p><strong class="mixin-code">handheld</strong> Смартфоны и аналогичные им аппараты.</p><br/>
+          <p><strong class="mixin-code">print</strong> Принтеры и другие печатающие устройства.</p><br/>
+          <p><strong class="mixin-code">projection</strong> Проекторы.</p><br/>
+          <p><strong class="mixin-code">screen</strong> Экран монитора.</p><br/>
+          <p><strong class="mixin-code">speech</strong> Речевые синтезаторы, а также программы для воспроизведения текста вслух. Сюда, например, можно отнести речевые браузеры.</p><br/>
+          <p><strong class="mixin-code">tty</strong> Устройства с фиксированным размером символов (телетайпы, терминалы, устройства с ограничениями дисплея).</p><br/>
+          <p><strong class="mixin-code">tv</strong> Телевизоры.</p>
+        </div>
+      </div>
+      <hr class="featurette-divider"/>
+      <div class="row">
+        <div class="bs-callout bs-callout-danger">
+          <h2>Media Queries: Медиа-функции</h2>
+          <p class="lead"> Media Queries были представлены в спецификации CSS3. Вкратце, Media Queries позволяют веб-дизайнерам создавать условные таблицы стилей, основанные на ширине, высоте, цветах, а также на ориентации дисплея. Уже сейчас у нас есть огромный список Media Queries, который вы можете посмотреть на сайте<a href="http://www.w3.org/TR/css3-mediaqueries/">W3C</a>,но мы сегодня будем использовать лишь некоторые их них. Давайте ознакомимся со списком часто используемых Медиа-функций, и с их предназначением:</p>
+        </div>
+        <div class="bs-callout bs-callout-info">
+          <h2>Часто используемые Медиа-функции:</h2><br/>
+          <p><strong class="mixin-code">min-width: …</strong><strong class="px-code">px</strong>– используется, когда ширина окна просмотра больше или равна параметру width</p><br/>
+          <p><strong class="mixin-code">max-width: …</strong><strong class="px-code">px</strong>– используется, когда ширина окна просмотра меньше или равна параметру width</p><br/>
+          <p><strong class="mixin-code">min-device-width: …</strong><strong class="px-code">px</strong>– используется, когда ширина устройства больше или равна параметру width</p><br/>
+          <p><strong class="mixin-code">max-device-width: …</strong><strong class="px-code">px</strong>– используется, когда ширина устройства меньше или равна параметру width</p><br/>
+          <p><strong class="mixin-code">-webkit-min-device-pixel-ratio :</strong><strong class="value-code">1.5</strong>– используется для определения устройств с экранами повышенной четкости (на android или ios)</p><br/>
+          <p>... остальные можно увидеть на<a href="http://www.w3.org/TR/css3-mediaqueries/"> W3C</a></p>
+        </div>
+      </div>
+      <hr class="featurette-divider"/>
+      <div class="row">
+        <div class="bs-callout bs-callout-danger">
+          <h2>Логические операторы, применяемые в медиа-запросах</h2>
+        </div>
+        <div class="bs-callout bs-callout-info">
+          <p class="lead">and</p>
+          <p>Логическое И. Указывается для объединения нескольких условий.</p>
+          <pre><strong class="mixin-code">@media</strong><strong class="media-code"> all and</strong>(<strong class="px-code">color</strong>) { ... }</pre>Пример. Стиль для всех цветных устройств
+        </div>
+        <div class="bs-callout bs-callout-info">
+          <p class="lead">not</p>
+          <p>Логическое НЕ. Указывается для отрицания условия.</p>
+          <pre><strong class="mixin-code">@media</strong><strong class="media-code"> all and</strong>(<strong class="px-code">not handheld</strong>) { ... }</pre>Пример. Стиль для всех устройств кроме смартфонов
+        </div>
+        <div class="bs-callout bs-callout-warning">
+          <p class="lead">Оператор not имеет низкий приоритет и оценивается в запросе последним, поэтому выражение</p>
+          <pre><strong class="mixin-code">@media</strong><strong class="media-code"> not all and</strong>(<strong class="px-code">color</strong>) { ... }</pre>
+          <p>следует понимать как</p>
+          <pre><strong class="mixin-code">@media</strong><strong class="media-code"> not</strong>(<strong class="media-code">all and</strong>(<strong class="px-code">color</strong>)) { ... }</pre>
+          <p>а не</p>
+          <pre><strong class="mixin-code">@media</strong>(<strong class="media-code">not all</strong>)<strong class="media-code">and</strong>(<strong class="px-code">color</strong>) { ... }</pre>
+        </div>
+        <div class="bs-callout bs-callout-info">
+          <p class="lead">only</p>
+          <p>Применяется для старых браузеров, которые не поддерживают медиа-запросы.</p>
+          <pre><strong class="mixin-code">@media</strong><strong class="media-code"> only all and</strong>(<strong class="px-code">not handheld</strong>) { ... }</pre>Пример. Стиль для новых браузеров
+        </div>
+        <div class="bs-callout bs-callout-warning">
+          <p class="lead">В списке нет логического оператора ИЛИ, его роль выполняет запятая. Перечисление нескольких условий через запятую говорит о том, что если хотя бы одно условие выполняется, то стиль будет применён.</p>
+          <pre>
+            <!--@media all and (orientation: landscape), all and (min-width: 480px) { ... }--><strong class="mixin-code">@media</strong><strong class="media-code">all and</strong>(<strong class="px-code">orientation: landscape</strong>),<strong class="media-code">all and</strong>(<strong class="media-code">min-width:</strong><strong class="px-code">480px</strong>)
+{ ... }</pre>Пример. Стиль для устройств с альбомной ориентацией или минимальной шириной 480 пикселов.
+        </div>
+      </div>
+      <hr class="featurette-divider"/>
+      <div class="bs-callout bs-callout-info">
+        <h4>Динамические классы</h4>
+        <p>Показанная здесь таблица классов обеспечивает динамику для различных устройств и их работу в связке с сеткой макета и медиа-запросами (разделено по устройствам).</p>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped responsive-utilities">
+          <thead>
+            <tr>
+              <th>Класс</th>
+              <th>Телефоны<small>480px и меньше</small></th>
+              <th>Наладонники (Планшеты)<small>767px и меньше</small></th>
+              <th>Ноутбуки и десктопы<small>768px и больше</small></th>
+            </tr>
+            <tbody>
+              <tr>
+                <th><code>.visible-phone</code></th>
+                <td class="is-visible">Виден</td>
+                <td class="is-hidden">Скрыто</td>
+                <td class="is-hidden">Скрыто</td>
+              </tr>
+              <tr>
+                <th><code>.visible-tablet</code></th>
+                <td class="is-hidden">Скрыто</td>
+                <td class="is-visible">Виден</td>
+                <td class="is-hidden">Скрыто</td>
+              </tr>
+              <tr>
+                <th><code>.visible-desktop</code></th>
+                <td class="is-hidden">Скрыто</td>
+                <td class="is-hidden">Скрыто</td>
+                <td class="is-visible">Виден</td>
+              </tr>
+              <tr>
+                <th><code>.hidden-phone</code></th>
+                <td class="is-hidden">Скрыто</td>
+                <td class="is-visible">Виден</td>
+                <td class="is-visible">Виден</td>
+              </tr>
+              <tr>
+                <th><code>.hidden-tablet</code></th>
+                <td class="is-visible">Виден</td>
+                <td class="is-hidden">Скрыто</td>
+                <td class="is-visible">Виден</td>
+              </tr>
+              <tr>
+                <th><code>.hidden-desktop</code></th>
+                <td class="is-visible">Виден</td>
+                <td class="is-visible">Виден</td>
+                <td class="is-hidden">Скрыто</td>
+              </tr>
+            </tbody>
+          </thead>
+        </table>
+      </div>
+      <hr class="featurette-divider"/>
+      <div class="jumbotron">
+        <h2>Поддержка браузерами медиа-запросов</h2>
+        <h2 class="text-muted"> Media queries support</h2>
+      </div>
+      <div class="table-responsive browser-support">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="first"></th>
+              <th class="ie">IE</th>
+              <th class="firefox">Firefox</th>
+              <th class="chrome">Chrome</th>
+              <th class="safari">Safari</th>
+              <th class="opera">Opera</th>
+              <th class="ios_saf">iOS Safari</th>
+              <th class="op_mini">Opera Mini</th>
+              <th class="android">Android Browser</th>
+              <th class="bb">Blackberry Browser</th>
+              <th class="op_mob">Opera Mobile</th>
+              <th class="and_chr">Chrome for Android</th>
+              <th class="and_ff">Firefox for Android</th>
+              <th class="ie_mob">IE Mobile</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>30 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">4.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>29 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Not supported" class="not-supported">2.0</td>
+              <td title="Supported" class="supported">5.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>28 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Not supported" class="not-supported">3.0</td>
+              <td title="Supported" class="supported">6.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>27 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">3.5</td>
+              <td title="Supported" class="supported">7.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>26 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">3.6</td>
+              <td title="Supported" class="supported">8.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>25 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">4.0</td>
+              <td title="Supported" class="supported">9.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>24 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">5.0</td>
+              <td title="Supported" class="supported">10.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>23 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">6.0</td>
+              <td title="Supported" class="supported">11.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>22 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">7.0</td>
+              <td title="Supported" class="supported">12.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>21 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">8.0</td>
+              <td title="Supported" class="supported">13.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>20 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">9.0</td>
+              <td title="Supported" class="supported">14.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>19 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">10.0</td>
+              <td title="Supported" class="supported">15.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>18 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">11.0</td>
+              <td title="Supported" class="supported">16.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>17 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">12.0</td>
+              <td title="Supported" class="supported">17.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>16 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">13.0</td>
+              <td title="Supported" class="supported">18.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Not supported" class="not-supported">9.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>15 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">14.0</td>
+              <td title="Supported" class="supported">19.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">9.5-9.6</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>14 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">15.0</td>
+              <td title="Supported" class="supported">20.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">10.0-10.1</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>13 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">16.0</td>
+              <td title="Supported" class="supported">21.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">10.5</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>12 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">17.0</td>
+              <td title="Supported" class="supported">22.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">10.6</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>11 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">18.0</td>
+              <td title="Supported" class="supported">23.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">11.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>10 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">19.0</td>
+              <td title="Supported" class="supported">24.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">11.1</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>9 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">20.0</td>
+              <td title="Supported" class="supported">25.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">11.5</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>8 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">21.0</td>
+              <td title="Supported" class="supported">26.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">11.6</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>7 versions back</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">22.0</td>
+              <td title="Supported" class="supported">27.0</td>
+              <td title="Partial support" class="partial-support">3.1</td>
+              <td title="Supported" class="supported">12.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">2.1</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>6 versions back</th>
+              <td title="Not supported (but has polyfill available)" class="not-supported">5.5</td>
+              <td title="Supported" class="supported">23.0</td>
+              <td title="Supported" class="supported">28.0</td>
+              <td title="Partial support" class="partial-support">3.2</td>
+              <td title="Supported" class="supported">12.1</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">2.2</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">10.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>5 versions back</th>
+              <td title="Not supported (but has polyfill available)" class="not-supported">6.0</td>
+              <td title="Supported" class="supported">24.0</td>
+              <td title="Supported" class="supported">29.0</td>
+              <td title="Supported" class="supported">4.0</td>
+              <td title="Supported" class="supported">15.0</td>
+              <td title="Supported" class="supported">3.2</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">2.3</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">11.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>4 versions back</th>
+              <td title="Not supported (but has polyfill available)" class="not-supported">7.0</td>
+              <td title="Supported" class="supported">25.0</td>
+              <td title="Supported" class="supported">30.0</td>
+              <td title="Supported" class="supported">5.0</td>
+              <td title="Supported" class="supported">16.0</td>
+              <td title="Supported" class="supported">4.0-4.1</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">3.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">11.1</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>3 versions back</th>
+              <td title="Not supported (but has polyfill available)" class="not-supported">8.0</td>
+              <td title="Supported" class="supported">26.0</td>
+              <td title="Supported" class="supported">31.0</td>
+              <td title="Supported" class="supported">5.1</td>
+              <td title="Supported" class="supported">17.0</td>
+              <td title="Supported" class="supported">4.2-4.3</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">4.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">11.5</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>2 versions back</th>
+              <td title="Supported" class="supported">9.0</td>
+              <td title="Supported" class="supported">27.0</td>
+              <td title="Supported" class="supported">32.0</td>
+              <td title="Supported" class="supported">6.0</td>
+              <td title="Supported" class="supported">18.0</td>
+              <td title="Supported" class="supported">5.0-5.1</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">4.1</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">12.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>Previous version</th>
+              <td title="Supported" class="supported">10.0</td>
+              <td title="Supported" class="supported">28.0</td>
+              <td title="Supported" class="supported">33.0</td>
+              <td title="Supported" class="supported">6.1</td>
+              <td title="Supported" class="supported">19.0</td>
+              <td title="Supported" class="supported">6.0-6.1</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">4.2-4.3</td>
+              <td title="Supported" class="supported">7.0</td>
+              <td title="Supported" class="supported">12.1</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <trnow>
+              <th>Current</th>
+              <td title="Supported" class="supported">11.0</td>
+              <td title="Supported" class="supported">29.0</td>
+              <td title="Supported" class="supported">34.0</td>
+              <td title="Supported" class="supported">7.0</td>
+              <td title="Supported" class="supported">20.0</td>
+              <td title="Supported" class="supported">7.0</td>
+              <td title="Supported" class="supported">5.0-7.0</td>
+              <td title="Supported" class="supported">4.4</td>
+              <td title="Supported" class="supported">10.0</td>
+              <td title="Supported" class="supported">21.0</td>
+              <td title="Supported" class="supported">33.0</td>
+              <td title="Supported" class="supported">26.0</td>
+              <td title="Supported" class="supported">10.0</td>
+            </trnow>
+            <tr>
+              <th>Near future</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">30.0</td>
+              <td title="Supported" class="supported">35.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">21.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>Farther future</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">31.0</td>
+              <td title="Supported" class="supported">36.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">22.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+            <tr>
+              <th>3 versions ahead</th>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Supported" class="supported">32.0</td>
+              <td title="Supported" class="supported">37.0</td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+              <td title="Unknown" class="unknown"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row">
+        <div class="jumbotron">
+          <p>Информация взята с http://caniuse.com/css-mediaqueries</p>
+          <p class="text-muted">Method of applying styles based on media information. Includes things like page and device dimensions</p>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <p><a href="thanks" role="button" class="btn btn-lg btn-success">Спасибо!</a></p>
+      </div>
+      <script type="text/javascript" src="lib/parallax/jquery.parallax.min.js"></script>
+      <script>$('#scene').parallax();</script>
+    </div>
+  </div>
+  <footer class="footer">
+    <div id="footer" class="navbar-inverse">
+      <div class="container"><span class="text-muted">Created by Yaroslav Zabara. Maybe I will write some info</span></div>
+    </div>
+  </footer>
+</body>
+
+return this["JST"];
+
+});

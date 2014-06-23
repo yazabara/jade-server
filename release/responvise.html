@@ -1,0 +1,118 @@
+define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
+
+
+<head>
+  <meta http-equiv="Content-Language"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="keywords" content="Тестовый проект"/>
+  <meta name="description" content="Тестовый проект"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Test jade poject</title>
+  <!--link(rel="shortcut icon",href="images/favicon.ico)-->
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/lightbox/css/lightbox.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/docs.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="css/common.css"/>
+  <script type="text/javascript" src="lib/jquery/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/lightbox/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <!--TODO fix responsive-->
+</head>
+<body>
+  <!--.nyan-cat-->
+  <!--TODO mixin and blocks-->
+  <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Отзывчивый веб-дизайн</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Отзывчивый веб-дизайн</a>
+      </div>
+    </div>
+  </nav>
+    <div class="jumbotron parallax-bg table-responsive">
+      <ul id="scene">
+        <li data-depth="0.80" class="layer"><img src="images/parallax/layer1.png"/></li>
+        <li data-depth="0.20" class="layer"><img src="images/parallax/layer2.png"/></li>
+        <li data-depth="0.40" class="layer"><img src="images/parallax/layer3.png"/></li>
+        <li data-depth="0.60" class="layer"><img src="images/parallax/layer4.png"/></li>
+        <li data-depth="0.150" class="layer">
+          <h1>Responsive web design</h1>
+        </li>
+        <li data-depth="0.190" class="layer"><img src="images/parallax/light-orange.png"/></li>
+        <li data-depth="0.140" style="" class="layer">
+          <p>отзывчивый вед-дизайн</p>
+        </li>
+      </ul>
+    </div>
+  <div class="container">
+    <div class="page-content">
+        <hr id="adaptee-id" class="featurette-divider"/>
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Отзывчивый дизайн<span class="text-muted"> зачем?</span></h2>
+            <ul>
+              <li>
+                <p class="lead">Интеллектуальная автоматическая подстройка контента и навигации под все модели мобильных устройств;</p>
+              </li>
+              <li>
+                <p class="lead">Отсутствие статичности. Это значит, что верстка ресурса выполнена не под определенное разрешение экрана, при котором более мелкие или крупные экраны будут отображать информацию некорректно, а будет гармонично подстраиваться под любой экран;</p>
+              </li>
+              <li>
+                <p class="lead">Нет необходимости создавать несколько различных версий сайта, которые подходили бы для планшетов, обычных персональных компьютеров, смартфонов и мобильных телефонов;</p>
+              </li>
+              <li>
+                <p class="lead">Не существует вероятности возникновения проблем с редиректом, которым подвержены мобильные версии.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5"><img data-src="holder.js/500x500/auto" alt="500x500" src="images/responsive-workflow.png" class="featurette-image img-responsive"/></div>
+        </div>
+        <hr id="adaptee1-id" class="featurette-divider"/>
+        <div class="row featurette">
+          <div class="col-md-5"><img data-src="holder.js/500x500/auto" alt="500x500" src="images/img-adaptive.png" class="featurette-image img-responsive"/></div>
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Этапы<span class="text-muted"> делаем по-очереди</span></h2>
+            <ul>
+              <li>
+                <p class="lead">Создаем прототипы страниц для различных разрешений экранов;</p>
+              </li>
+              <li>
+                <p class="lead">Разрабатываем дизайн, с учем всех перемещений блоков, в зависимости от расширения экрана;</p>
+              </li>
+              <li>
+                <p class="lead">Верстаем адаптивный дизайн сайта (это один из наиболее важных этапов работы);</p>
+              </li>
+              <li>
+                <p class="lead">Тестирование, perfectpixel</p>
+              </li>
+              <li>
+                <p class="lead">Дальше интегрируем, если это какой-либо сервис, а не статический сайт</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div class="bs-callout bs-callout-warning">
+        <h4>Внимание</h4>
+        <p>Приход адаптивных сайтов полностью изменил процесс разработки. Если раньше макеты дизайна сдавались как этап и уходили дальше по производственной цепочке, то для создания responsive сайта необходимо плотное взаимодействие дизайнера и front-end разработчика на большинстве этапов разработки.В зависимости от масштабов компании роли проектировщика, front-end разработчика и дизайнера могут быть смешаны.</p>
+      </div>
+      <hr class="featurette-divider"/>
+      <div class="jumbotron">
+        <h1>Перейдем к пратике</h1>
+        <p><a href="/responsivePrincipas" role="button" class="btn btn-lg btn-success">Поехали дальше!</a></p>
+      </div>
+      <script type="text/javascript" src="lib/parallax/jquery.parallax.min.js"></script>
+      <script>$('#scene').parallax();</script>
+    </div>
+  </div>
+  <footer class="footer">
+    <div id="footer" class="navbar-inverse">
+      <div class="container"><span class="text-muted">Created by Yaroslav Zabara. Maybe I will write some info</span></div>
+    </div>
+  </footer>
+</body>
+
+return this["JST"];
+
+});

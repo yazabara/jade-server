@@ -1,0 +1,82 @@
+define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
+
+
+<head>
+  <meta http-equiv="Content-Language"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="keywords" content="Тестовый проект"/>
+  <meta name="description" content="Тестовый проект"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Test jade poject</title>
+  <!--link(rel="shortcut icon",href="images/favicon.ico)-->
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/lightbox/css/lightbox.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/docs.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="css/common.css"/>
+  <script type="text/javascript" src="lib/jquery/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/lightbox/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <!--TODO fix responsive-->
+</head>
+<body>
+  <!--.nyan-cat-->
+  <!--TODO mixin and blocks-->
+  <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Отзывчивый веб-дизайн</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Отзывчивый веб-дизайн</a>
+      </div>
+    </div>
+  </nav>
+  <div id="home-carousel" data-ride="carousel" class="carousel slide">
+    <!--include indicators-->
+    <div class="carousel-inner">
+      <div class="item active"><img src="images/cats/5.jpg"/></div>
+      <div class="item"><img src="images/cats/8.jpg"/></div>
+      <div class="item"><img src="images/cats/7.jpg"/></div>
+      <div class="item"><img src="images/cats/8.jpg"/></div>
+    </div><a href="#home-carousel" data-slide="prev" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a><a href="#home-carousel" data-slide="next" class="right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>
+  </div>
+  <div class="container">
+    <div class="page-content">
+      <div class="jumbotron">
+        <h1>Добрый день!</h1>
+        <h2 class="text-muted">Что нас ждет впереди?</h2>
+        <p class="lead">
+          Этот проект был создан для того, чтобы показать и в некотором роде прорекламировать
+          отзывчивый дизайн. Сайт является презентацией и результатом работы технологий, которые мы затроним
+          в ходе презентации. Далее мы рассмотрим основные принципы responsive web-desing,
+          про которые я расскажу чуть позже
+        </p>
+        <p><a href="jadeSass" role="button" class="btn btn-lg btn-success">Начнем?</a></p>
+      </div>
+      <div class="row placeholders">
+        <div class="col-xs-6 col-sm-3 placeholder"><img data-src="holder.js/200x200/auto/sky" alt="200x200" src="images/cats/1.jpg" class="img-responsive img-circle"/>
+          <h4>NodeJs</h4><span class="text-muted">еще эффективнее</span>
+        </div>
+        <div class="col-xs-6 col-sm-3 placeholder"><img data-src="holder.js/200x200/auto/sky" alt="200x200" src="images/cats/2.jpg" class="img-responsive img-circle"/>
+          <h4>Grunt</h4><span class="text-muted">собираем быстро</span>
+        </div>
+        <div class="col-xs-6 col-sm-3 placeholder"><img data-src="holder.js/200x200/auto/sky" alt="200x200" src="images/cats/3.jpg" class="img-responsive img-circle"/>
+          <h4>Jade</h4><span class="text-muted">Верска проще</span>
+        </div>
+        <div class="col-xs-6 col-sm-3 placeholder"><img data-src="holder.js/200x200/auto/sky" alt="200x200" src="images/cats/4.jpg" class="img-responsive img-circle"/>
+          <h4>Sass</h4><span class="text-muted">стили удобнее</span>
+        </div>
+      </div>
+      <hr class="featurette-divider"/>
+    </div>
+  </div>
+  <footer class="footer">
+    <div id="footer" class="navbar-inverse">
+      <div class="container"><span class="text-muted">Created by Yaroslav Zabara. Maybe I will write some info</span></div>
+    </div>
+  </footer>
+</body>
+
+return this["JST"];
+
+});

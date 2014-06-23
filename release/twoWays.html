@@ -1,0 +1,96 @@
+define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
+
+
+<head>
+  <meta http-equiv="Content-Language"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="keywords" content="Тестовый проект"/>
+  <meta name="description" content="Тестовый проект"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Test jade poject</title>
+  <!--link(rel="shortcut icon",href="images/favicon.ico)-->
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/lightbox/css/lightbox.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/docs.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="css/common.css"/>
+  <script type="text/javascript" src="lib/jquery/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/lightbox/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <!--TODO fix responsive-->
+</head>
+<body>
+  <!--.nyan-cat-->
+  <!--TODO mixin and blocks-->
+  <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Отзывчивый веб-дизайн</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Отзывчивый веб-дизайн</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="page-content">
+      <div class="jumbotron">
+        <h1>Эффективность</h1>
+        <h2 class="text-muted">Далее следуте определить, как мы будем использовать данные технологии</h2>
+        <p>Конечный результат - странички, которые мы сверстали.</p>
+      </div>
+      <hr class="featurette-divider"/>
+      <div class="row placeholders">
+        <div class="col-xs-6 col-sm-3 placeholder"><img data-src="holder.js/200x200/auto/sky" alt="200x200" src="images/cats/1.jpg" class="img-responsive img-circle"/>
+          <h4>NodeJs</h4><span class="text-muted">еще эффективнее</span>
+        </div>
+        <div class="col-xs-6 col-sm-3 placeholder"><img data-src="holder.js/200x200/auto/sky" alt="200x200" src="images/cats/2.jpg" class="img-responsive img-circle"/>
+          <h4>Grunt</h4><span class="text-muted">собираем быстро</span>
+        </div>
+        <div class="col-xs-6 col-sm-3 placeholder"><img data-src="holder.js/200x200/auto/sky" alt="200x200" src="images/cats/3.jpg" class="img-responsive img-circle"/>
+          <h4>Jade</h4><span class="text-muted">Верска проще</span>
+        </div>
+        <div class="col-xs-6 col-sm-3 placeholder"><img data-src="holder.js/200x200/auto/sky" alt="200x200" src="images/cats/4.jpg" class="img-responsive img-circle"/>
+          <h4>Sass</h4><span class="text-muted">стили удобнее</span>
+        </div>
+      </div>
+      <hr class="featurette-divider"/>
+      <div class="jumbotron">
+        <h2>Дилемма...</h2>
+        <h2 class="text-muted">Выбрав технологии - нужно понять, как мы их будет эффективно использовать</h2>
+        <p>
+          Существует два подхода - первый довольно просто, быстрый, но не очень эффективный и очень не универсальный.
+          Второй же потребует больше затрат - около для настройки, зато после сможет дать фору любому другому подходу.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Watch-files</h2>
+          <h2 class="text-muted">plugin для IDE</h2><img alt="200x200" src="images/sassWatch.png" class="img-responsive"/>
+        </div>
+        <div class="col-md-6">
+          <h2>Node-js сервер и Grunt сборка</h2>
+          <h2 class="text-muted">более интереснре решение</h2>
+          <p>Создать простой сервер для фронт-энд разработки используя NodeJs - интерпритатор и Grunt - инструмент для сборки.</p>
+          <p><a href="nodejsServer" role="button" class="btn btn-lg btn-success">Подробнее</a></p>
+        </div>
+      </div>
+      <hr class="featurette-divider"/>
+      <div id="questions-id" class="questions row">
+        <div class="col-md-8">
+          <h2>Вопросы?</h2>
+        </div>
+        <div class="col-md-4"><img data-src="holder.js/200x200/auto/sky" alt="200x200" src="images/cats/6.jpg" class="img-responsive img-circle"/></div>
+      </div>
+      <hr class="featurette-divider"/>
+    </div>
+  </div>
+  <footer class="footer">
+    <div id="footer" class="navbar-inverse">
+      <div class="container"><span class="text-muted">Created by Yaroslav Zabara. Maybe I will write some info</span></div>
+    </div>
+  </footer>
+</body>
+
+return this["JST"];
+
+});

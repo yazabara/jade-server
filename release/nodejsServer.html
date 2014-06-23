@@ -1,0 +1,98 @@
+define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
+
+
+<head>
+  <meta http-equiv="Content-Language"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="keywords" content="Тестовый проект"/>
+  <meta name="description" content="Тестовый проект"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Test jade poject</title>
+  <!--link(rel="shortcut icon",href="images/favicon.ico)-->
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/lightbox/css/lightbox.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/docs.min.css"/>
+  <link media="all" rel="stylesheet" type="text/css" href="css/common.css"/>
+  <script type="text/javascript" src="lib/jquery/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/lightbox/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <!--TODO fix responsive-->
+</head>
+<body>
+  <!--.nyan-cat-->
+  <!--TODO mixin and blocks-->
+  <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Отзывчивый веб-дизайн</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Отзывчивый веб-дизайн</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="page-content">
+      <div class="jumbotron">
+        <h1>Сервер за пару минут</h1>
+        <h2 class="text-muted">Всё проще чем кажется!</h2>
+      </div>
+        <div id="nodejs-id" class="featurette container">
+          <h2>Node Js</h2>
+          <p class="lead">Чтобы ваш JavaScript код выполнился на вычислительной машине вне браузера (на backend), он должен быть интерпретирован и, конечно же, выполнен. Именно это и делает Node.js. Для этого он использует движок V8 VM от Google — ту же самую среду исполнения для JavaScript, которую использует браузер Google Chrome.</p><img src="images/nodejs.png" alt="info" class="featurette-image img-responsive"/>
+        </div>
+        <div id="grunt-id" class="featurette container">
+          <h2>Grunt</h2>
+          <p class="lead">Grunt 0.4: система сборки для фронтенд-разработчиков</p><img src="images/grunt_work.jpg" alt="info" class="featurette-image img-responsive"/>
+        </div>
+      <div class="jumbotron">
+        <h2>Как это работает?</h2>
+      </div>
+        <div id="info-id" class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail"><a href="images/createProject.jpg" data-lightbox="example-set" data-title="Создаем проект Создаем проект, определяем файлы Gruntfile.js, package.json. Создаем начальные директории для ресурсов" data-src="holder.js/300x200" style="width: 300px; height: 200px;"><img src="images/createProject.jpg" alt=""/></a>
+              <div class="caption">
+                <h3>Создаем проект</h3>
+                <p>Создаем проект, определяем файлы Gruntfile.js, package.json. Создаем начальные директории для ресурсов</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail"><a href="images/gruntfile.jpg" data-lightbox="example-set" data-title="Gruntfile Первый - Gruntfile.js или Gruntfile.coffee — файл конфигурации Гранта (грантфайл). Определеяет модули и таски." data-src="holder.js/300x200" style="width: 300px; height: 200px;"><img src="images/gruntfile.jpg" alt=""/></a>
+              <div class="caption">
+                <h3>Gruntfile</h3>
+                <p>Первый - Gruntfile.js или Gruntfile.coffee — файл конфигурации Гранта (грантфайл). Определеяет модули и таски.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail"><a href="images/package.jpg" data-lightbox="example-set" data-title="package.json Второй - package.json — описание проекта для npm. Содержит список зависимостей (в нашем случае это Грант и его плагины) и позволяет потом устанавливать их все одной командой." data-src="holder.js/300x200" style="width: 300px; height: 200px;"><img src="images/package.jpg" alt=""/></a>
+              <div class="caption">
+                <h3>package.json</h3>
+                <p>Второй - package.json — описание проекта для npm. Содержит список зависимостей (в нашем случае это Грант и его плагины) и позволяет потом устанавливать их все одной командой.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="jumbotron cat-background cat1">
+        <h2>Разобрались?</h2>
+        <p><a href="environment" role="button" class="btn btn-lg btn-success">Тогда идем дальше</a></p>
+      </div>
+      <div id="questions-id" class="questions row">
+        <div class="col-md-8">
+          <h2>Вопросы?</h2>
+        </div>
+        <div class="col-md-4"><img data-src="holder.js/200x200/auto/sky" alt="200x200" src="images/cats/6.jpg" class="img-responsive img-circle"/></div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div id="footer" class="navbar-inverse">
+      <div class="container"><span class="text-muted">Created by Yaroslav Zabara. Maybe I will write some info</span></div>
+    </div>
+  </footer>
+</body>
+
+return this["JST"];
+
+});
