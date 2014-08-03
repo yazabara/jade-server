@@ -9,4 +9,4 @@ jade-server
 
 27.05.2014 - EPAM IT Magazine Tver
 
-author Yaroslav Zabara
+Автор: Yaroslav Zabara
