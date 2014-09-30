@@ -144,3 +144,13 @@ body {
   margin: auto;
   display: block;
   border: 1px solid red; }
+
+.left-column {
+  width: 27%;
+  /* 270px / 1000px = 0,27 */
+  float: left; }
+
+.right-column {
+  width: 73%;
+  /* 730px / 1000px = 0,73 */
+  float: right; }

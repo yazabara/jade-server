@@ -3,6 +3,5 @@ define(['routes/page'], function (page) {
 		//Page preview
 		app.get("/", page.renderPageList);
 		app.get("/:page", page.renderPagePreview);
-
 	};
 });
